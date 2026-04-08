@@ -60,7 +60,7 @@ export const developerFlags: Record<string, string> = {
     'Meta': '🇺🇸',
     'xAI': '🇺🇸',
     'Nvidia': '🇺🇸',
-    'Mistral': '🇫🇷',
+    'Mistral': '🇪🇺',
     'DeepSeek': '🇨🇳',
     'MiniMax': '🇨🇳',
     'Moonshot AI': '🇨🇳',
