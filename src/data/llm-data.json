@@ -21,7 +21,7 @@
     "VendingBench": 6144.18,
     "HumLastExam": 39.8,
     "ARCAGI2": 74.0,
-    "bullshitBench": 48.0,
+    "bullshitBench": 42.0,
     "notes": "Reported additional benchmarks: SWE-Bench Pro (public) 57.7%, GDPval 83.0%, OSWorld-Verified 75.0%, Toolathlon 54.6%, BrowseComp 82.7%, MMMU Pro (no tools) 81.2%, Tau2-bench Telecom (none) 64.3%. API pricing update notes: Batch and Flex are available at 50% of standard rates, Priority processing is 2x standard rates."
   },
   {
@@ -46,7 +46,7 @@
     "HumLastExam": 28.2,
     "SWEBench": 54.4,
     "ARCAGI2": 18.9,
-    "bullshitBench": 32.0,
+    "bullshitBench": 31.0,
     "notes": "Artificial Analysis reports AAIndex 48, 204 tok/s, total cost to run the Intelligence Index $1353.82, and 240M output tokens used. OpenAI reports 400k context, image input support, tool use, and additional benchmarks including OSWorld-Verified 72.1%, Toolathlon 42.9%, HLE w/ tools 41.5%, and MMMUPro 76.6%."
   },
   {
@@ -70,7 +70,7 @@
     "HumLastExam": 24.3,
     "SWEBench": 52.4,
     "ARCAGI2": 5.7,
-    "bullshitBench": 14.0,
+    "bullshitBench": 10.0,
     "notes": "Artificial Analysis reports AAIndex 44, 192.5 tok/s, total cost to run the Intelligence Index $375.99, and 210M output tokens used. OpenAI positions nano as the lowest-cost GPT-5.4 variant for high-volume API workloads and reports additional benchmarks including Toolathlon 35.5%, HLE w/ tools 37.7%, and OSWorld-Verified 39.0%."
   },
   {
@@ -288,6 +288,25 @@
     "fictionLiveBench": 96.9
   },
   {
+    "model": "Gemma 4 31B",
+    "provider": "Google AI",
+    "developer": "Google AI",
+    "releaseDate": "2026-04-02",
+    "context": 256,
+    "inputPrice": 0,
+    "outputPrice": 0,
+    "hasReasoning": true,
+    "hasVision": true,
+    "AAIndex": 39,
+    "outputSpeed": 35.8,
+    "costAAIndex": 0,
+    "tokenUseAAIndex": 39,
+    "GPQAdiamond": 86,
+    "HumLastExam": 23,
+    "bullshitBench": 25,
+    "notes": "Artificial Analysis lists Gemma 4 31B (Reasoning) as an open-weights model from Google with text, image, and video input, text output, a 256k context window, 30.7B total parameters, Apache 2.0 license, and Hugging Face weights. Public benchmarks on the model page include GDPval-AA 31%, Terminal-Bench Hard 36%, tau^2-Bench Telecom 66%, AA-LCR 62%, AA-Omniscience Accuracy 20%, AA-Omniscience Non-Hallucination Rate 18%, IFBench 76%, CritPt 1%, SciCode 43%, and MMMU-Pro 75%. The FAQ also reports 1.61s TTFT based on Google's API."
+  },
+  {
     "model": "Grok 4.20 Beta 0309",
     "provider": "xAI",
     "developer": "xAI",
@@ -304,7 +323,8 @@
     "outputSpeed": 259.7,
     "HumLastExam": 30,
     "GPQAdiamond": 89,
-    "bullshitBench": 67,
+    "ARCAGI2": 65.1,
+    "bullshitBench": 54,
     "VendingBench": 4662.85,
     "notes": "Artificial Analysis reports 9.01s time to first token, text and image input support, text output, and proprietary status. The Artificial Analysis model page lists March 10, 2026 as the release date."
   },
@@ -341,6 +361,21 @@
     "notes": "Artificial Analysis reports 155.3 tokens/s, 0.90s TTFT, non-reasoning behavior, 128k context, and pricing of $0.10 / $0.10 per 1M tokens. Cerebras reports a provider-specific speed of ~2200 tokens/s for this model."
   },
   {
+    "model": "Muse Spark",
+    "provider": "Meta",
+    "developer": "Meta",
+    "releaseDate": "2026-04-08",
+    "modelUrl": "https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/",
+    "context": 262,
+    "hasReasoning": true,
+    "hasVision": true,
+    "AAIndex": 52,
+    "tokenUseAAIndex": 58,
+    "GPQAdiamond": 88,
+    "HumLastExam": 40,
+    "notes": "Meta describes Muse Spark as the first Muse-series model, powering Meta AI across the app and website with multimodal reasoning, and rolling out more broadly across Meta products with private-preview API access for select partners. Artificial Analysis lists Muse Spark as a proprietary reasoning model with text, image, and speech input, text output, and a 262k context window. Public benchmarks on the model page include GDPval-AA 47%, Terminal-Bench Hard 46%, tau^2-Bench Telecom 92%, AA-LCR 70%, AA-Omniscience Accuracy 45%, AA-Omniscience Non-Hallucination Rate 27%, IFBench 76%, CritPt 11%, MMMU-Pro 81%, and SciCode 52%. Pricing and output speed were shown as unavailable on the referenced page, so those fields are intentionally omitted here."
+  },
+  {
     "model": "NVIDIA Nemotron 3 Super",
     "developer": "Nvidia",
     "releaseDate": "2026-03-11",
@@ -351,6 +386,7 @@
     "AAIndex": 36,
     "costAAIndex": 151,
     "tokenUseAAIndex": 110,
+    "bullshitBench": 47,
     "outputSpeed": 423.9,
     "notes": "Artificial Analysis reports 423.9 tokens/s, 0.70s time-to-first-token, and a blended price of $0.41 per 1M tokens. NVIDIA reports Nemotron 3 Super scores 85.6% on PinchBench and uses a 120B total / 12B active-parameter hybrid Mamba-Transformer latent MoE architecture."
   },
@@ -397,6 +433,24 @@
     "ARCAGI2": 4.9,
     "bullshitBench": 28.0,
     "VendingBench": 4432.12
+  },
+  {
+    "model": "GLM-5.1",
+    "developer": "Z AI",
+    "releaseDate": "2026-04-07",
+    "modelUrl": "https://huggingface.co/zai-org/GLM-5.1",
+    "context": 200,
+    "inputPrice": 1.4,
+    "outputPrice": 4.4,
+    "hasReasoning": true,
+    "AAIndex": 51,
+    "outputSpeed": 69.6,
+    "costAAIndex": 812.87,
+    "tokenUseAAIndex": 120,
+    "GPQAdiamond": 87,
+    "HumLastExam": 28,
+    "VendingBench": 5634.41,
+    "notes": "Artificial Analysis lists GLM-5.1 (Reasoning) as an open-weights text-only model from Z AI with a 200k context window, 754B total parameters, MIT license, and Hugging Face weights. Public benchmarks on the model page include GDPval-AA 52%, Terminal-Bench Hard 42%, tau^2-Bench Telecom 98%, AA-LCR 62%, AA-Omniscience Accuracy 24%, AA-Omniscience Non-Hallucination Rate 71%, IFBench 76%, CritPt 5%, and SciCode 44%. Output speed, pricing, and TTFT on the page are described as medians across providers serving the model."
   },
   {
     "model": "GLM-4.7",
@@ -459,6 +513,25 @@
     "notes": "Artificial Analysis reports this non-reasoning text model has 235B total parameters with 22B active, uses the Apache 2.0 license, and has 2.46s TTFT based on Alibaba's API. Artificial Analysis reports 55.1 tokens/s, while Cerebras reports a provider-specific speed of ~1400 tokens/s for this model."
   },
   {
+    "model": "Qwen3.6 Plus",
+    "provider": "Alibaba",
+    "developer": "Qwen",
+    "releaseDate": "2026-04-02",
+    "context": 1000,
+    "inputPrice": 0.5,
+    "outputPrice": 3,
+    "hasReasoning": true,
+    "hasVision": true,
+    "AAIndex": 50,
+    "outputSpeed": 50.4,
+    "costAAIndex": 482.65,
+    "tokenUseAAIndex": 100,
+    "GPQAdiamond": 88,
+    "HumLastExam": 26,
+    "VendingBench": 5114.87,
+    "notes": "Artificial Analysis lists Qwen3.6 Plus as a proprietary reasoning model from Alibaba with text, image, and video input, text output, and a 1M context window. Public benchmarks on the model page include GDPval-AA 44%, Terminal-Bench Hard 44%, tau^2-Bench Telecom 98%, AA-LCR 70%, AA-Omniscience Accuracy 24%, AA-Omniscience Non-Hallucination Rate 68%, IFBench 75%, CritPt 3%, SciCode 41%, and MMMU-Pro 78%. The page also reports 2.29s TTFT based on Alibaba's API."
+  },
+  {
     "model": "MiniMax M2.5",
     "developer": "MiniMax",
     "releaseDate": "2026-02-12",
@@ -511,6 +584,7 @@
     "GPQAdiamond": 84,
     "HumLastExam": 22,
     "ARCAGI2": 4.0,
+    "bullshitBench": 13,
     "VendingBench": 1034,
     "notes": "Artificial Analysis page for the reasoning variant reports text-only input/output, 685B total parameters with 37B active, MIT license, and 1.95s TTFT based on DeepSeek's API."
   },
@@ -549,7 +623,7 @@
     "tokenUseAAIndex": 97,
     "GPQAdiamond": 84,
     "HumLastExam": 20,
-    "bullshitBench": 16,
+    "bullshitBench": 13,
     "notes": "Artificial Analysis page reports text-only input/output, 309B total parameters with 15B active, MIT license, and 2.29s TTFT based on the median across providers."
   }
 ]
