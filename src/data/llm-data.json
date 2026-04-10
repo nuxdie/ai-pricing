@@ -454,7 +454,7 @@
     "model": "GLM-5.1",
     "developer": "Z AI",
     "releaseDate": "2026-04-07",
-    "modelUrl": "https://huggingface.co/zai-org/GLM-5.1",
+    "modelUrl": "https://z.ai/blog/glm-5.1",
     "context": 200,
     "inputPrice": 1.4,
     "outputPrice": 4.4,
