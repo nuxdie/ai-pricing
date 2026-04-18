@@ -15,6 +15,7 @@ import mistralLogo from '@/assets/mistral.png';
 import qwenLogo from '@/assets/qwen.png';
 import alibabaLogo from '@/assets/alibaba.png';
 import zaiLogo from '@/assets/zai.svg';
+import stepFunLogo from '@/assets/stepfun.svg';
 import xiaomiLogo from '@/assets/xiaomi.svg';
 
 // Create a mapping of provider names to their logos
@@ -31,6 +32,7 @@ export const providerLogos: Record<string, string> = {
     'Mistral': mistralLogo,
     'Cohere': cohereLogo,
     'Alibaba': alibabaLogo,
+    'StepFun': stepFunLogo,
     'Xiaomi': xiaomiLogo,
 };
 
@@ -49,6 +51,7 @@ export const developerLogos: Record<string, string> = {
     'Cohere': cohereLogo,
     'Qwen': qwenLogo,
     'Z AI': zaiLogo,
+    'StepFun': stepFunLogo,
     'Xiaomi': xiaomiLogo,
 };
 
@@ -66,6 +69,7 @@ export const developerFlags: Record<string, string> = {
     'Moonshot AI': '🇨🇳',
     'Z AI': '🇨🇳',
     'Qwen': '🇨🇳',
+    'StepFun': '🇨🇳',
     'Cohere': '🇨🇦',
     'Xiaomi': '🇨🇳',
 };

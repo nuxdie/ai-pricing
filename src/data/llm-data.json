@@ -571,6 +571,22 @@
     "notes": "Artificial Analysis lists Qwen3.6 Plus as a proprietary reasoning model from Alibaba with text, image, and video input, text output, and a 1M context window. Public benchmarks on the model page include GDPval-AA 44%, Terminal-Bench Hard 44%, tau^2-Bench Telecom 98%, AA-LCR 70%, AA-Omniscience Accuracy 24%, AA-Omniscience Non-Hallucination Rate 68%, IFBench 75%, CritPt 3%, SciCode 41%, and MMMU-Pro 78%. The page also reports 2.29s TTFT based on Alibaba's API."
   },
   {
+    "model": "Step 3.5 Flash 2603",
+    "developer": "StepFun",
+    "releaseDate": "2026-04-02",
+    "modelUrl": "https://static.stepfun.com/blog/step-3.5-flash/",
+    "context": 256,
+    "hasReasoning": true,
+    "toolUse": true,
+    "AAIndex": 38,
+    "outputSpeed": 200.4,
+    "tokenUseAAIndex": 260,
+    "GPQAdiamond": 83,
+    "HumLastExam": 23,
+    "SWEBench": 74.4,
+    "notes": "StepFun describes Step 3.5 Flash as its most capable open-source foundation model, built as a sparse MoE with 196B total parameters and 11B active parameters per token, a 256k context window, and MTP-3 decoding optimized for agentic reasoning and coding workloads. The official page reports benchmark highlights including SWE-bench Verified 74.4%, Terminal-Bench 2.0 51.0%, tau^2-Bench 88.2, BrowseComp 69.0 with context manager, and xbench-DeepSearch 56.3. Artificial Analysis lists the Step 3.5 Flash 2603 variant at 38 AAIndex, 200.4 tok/s, 260M output tokens used for the Intelligence Index, and public benchmark values including GDPval-AA 29%, Terminal-Bench Hard 33%, tau^2-Bench Telecom 87%, AA-LCR 54%, AA-Omniscience Accuracy 25%, AA-Omniscience Non-Hallucination Rate 8%, IFBench 67%, CritPt 2%, and SciCode 39%. Pricing on the Artificial Analysis page appeared as unavailable placeholders, so input price, output price, and total evaluation cost are intentionally omitted rather than treated as free."
+  },
+  {
     "model": "MiniMax M2.5",
     "developer": "MiniMax",
     "releaseDate": "2026-02-12",
