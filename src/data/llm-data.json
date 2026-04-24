@@ -1,5 +1,18 @@
 [
   {
+    "model": "GPT 5.5",
+    "developer": "OpenAI",
+    "releaseDate": "2026-04-23",
+    "modelUrl": "https://openai.com/index/introducing-gpt-5-5/",
+    "hasReasoning": true,
+    "hasVision": true,
+    "AAIndex": 60,
+    "costAAIndex": 3357,
+    "tokenUseAAIndex": 75,
+    "ARCAGI2": 85,
+    "VendingBench": 7523.84
+  },
+  {
     "model": "GPT 5.4",
     "developer": "OpenAI",
     "releaseDate": "2026-03-05",
@@ -429,6 +442,18 @@
     "notes": "Mistral describes Small 4 as a hybrid open-source model that unifies instruct, reasoning, multimodal, and agentic coding capabilities, with configurable reasoning effort, text and image input, a 256k context window, 119B total parameters, and 6B active parameters per token (8B including embeddings and output layers). It is released under Apache 2.0 and published with Hugging Face availability. Artificial Analysis lists Mistral Small 4 (Reasoning) with 142.3 tok/s output speed and public benchmark results including GDPval-AA 18%, Terminal-Bench Hard 17%, tau^2-Bench Telecom 34%, AA-LCR 45%, AA-Omniscience Accuracy 22%, AA-Omniscience Non-Hallucination Rate 33%, IFBench 48%, CritPt 0%, SciCode 38%, and MMMU-Pro 57%. The FAQ also reports 0.96s TTFT based on Mistral's API."
   },
   {
+    "model": "Kimi K2.6",
+    "developer": "Moonshot AI",
+    "releaseDate": "2026-04-21",
+    "modelUrl": "https://www.kimi.com/blog/kimi-k2-6",
+    "AAIndex": 54,
+    "outputSpeed": 106.3,
+    "costAAIndex": 948,
+    "tokenUseAAIndex": 170,
+    "bullshitBench": 65,
+    "hasVision": true
+  },
+  {
     "model": "Kimi K2.5",
     "developer": "Moonshot AI",
     "releaseDate": "2026-01-27",
@@ -624,10 +649,21 @@
     "notes": "Official MiniMax launch post says M2.7 is available on MiniMax Agent and the MiniMax API Platform, with native agent-team workflows and dynamic tool search. Reported benchmarks include SWE-Pro 56.22%, VIBE-Pro 55.6%, Terminal Bench 2 57.0%, GDPval-AA 1495 Elo, Toolathon 46.3%, and MM Claw 62.7%, plus a 97% skill adherence rate across 40 complex skills. Artificial Analysis reports this reasoning model is text-only, proprietary, and available via two API providers; its model page lists a 205k context window and 3.31s TTFT, while the FAQ rounds context to 200k and blended pricing to $0.53 per 1M tokens."
   },
   {
+    "model": "DeepSeek V4 Flash",
+    "developer": "DeepSeek",
+    "releaseDate": "2026-04-24",
+    "modelUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+    "AAIndex": 47,
+    "outputSpeed": 83.8,
+    "costAAIndex": 113,
+    "tokenUseAAIndex": 240,
+    "hasVision": true
+  },
+  {
     "model": "DeepSeek V3.2",
     "developer": "DeepSeek",
     "releaseDate": "2025-12-01",
-    "modelUrl": "https://artificialanalysis.ai/models/deepseek-v3-2",
+    "modelUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3.2",
     "context": 128,
     "inputPrice": 0.28,
     "outputPrice": 0.42,
