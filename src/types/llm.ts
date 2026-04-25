@@ -13,8 +13,8 @@ export interface LLMModel {
     VendingBench?: number | null; // Vending Machine Bench, USD
     ARCAGI2?: number | null; // ARC AGI 2 Benchmark, %
     snitchBench?: number | null; // SnitchBench Gov Snitch Rate, %
-    skateBench?: number | null; // SkateBench Technical Trick Terminology, %
     bullshitBench?: number | null; // BullshitBench v2 nonsense detection rate, %
+    vibeCodeBench?: number | null; // Vibe Code Bench v1.1 end-to-end web app dev, %
     context?: number;
     inputPrice?: number;
     outputPrice?: number;

@@ -88,8 +88,8 @@ export const columns = (
   const tokenUseAAIndexRange = getColumnMinMax(data, "tokenUseAAIndex");
   const outputSpeedRange = getColumnMinMax(data, "outputSpeed");
   const aaIndexRange = getColumnMinMax(data, "AAIndex");
-  const skateBenchRange = getColumnMinMax(data, "skateBench");
   const bullshitBenchRange = getColumnMinMax(data, "bullshitBench");
+  const vibeCodeBenchRange = getColumnMinMax(data, "vibeCodeBench");
   const vendingBenchValues = data
     .map((item) => item.VendingBench)
     .filter((value): value is number => value !== null && value !== undefined);
@@ -238,6 +238,7 @@ export const columns = (
         <ColumnHeader
           column={column}
           title="AAIndex"
+          subtitle="%"
           tooltip="Artificial Analysis Intelligence Index (higher is better)"
           link={{
             url: "https://artificialanalysis.ai/leaderboards/models",
@@ -372,7 +373,7 @@ export const columns = (
       header: ({ column }) => (
         <ColumnHeader
           column={column}
-          title="SimpleBench"
+          title="Simple"
           subtitle="MCQ · %"
           tooltip="Benchmark covering spatio-temporal reasoning, social intelligence, and trick questions (Human Baseline 83.7%) (higher is better)"
           link={{
@@ -425,42 +426,13 @@ export const columns = (
       sortUndefined: "last",
     },
 
-    // ─── Benchmarks: SkateBench ───
-    {
-      accessorKey: "skateBench",
-      header: ({ column }) => (
-        <ColumnHeader
-          column={column}
-          title="SkateBench"
-          subtitle="v2 · %"
-          tooltip="Technical skateboarding trick terminology knowledge — percentage of correct answers out of 210 tests (higher is better)"
-          link={{
-            url: "https://skatebench.t3.gg/",
-            title: "SkateBench Leaderboard",
-          }}
-          sort={{ enabled: true }}
-        />
-      ),
-      cell: ({ row }) => (
-        <BarCell
-          value={row.original.skateBench}
-          min={skateBenchRange.min}
-          max={skateBenchRange.max}
-          color={COLORS.benchmark}
-          format={(v) => `${Math.round(v)}`}
-        />
-      ),
-      sortDescFirst: true,
-      sortUndefined: "last",
-    },
-
     // ─── Benchmarks: BullshitBench v2 ───
     {
       accessorKey: "bullshitBench",
       header: ({ column }) => (
         <ColumnHeader
           column={column}
-          title="BullshitBench"
+          title="Bullshit"
           subtitle="v2 · %"
           tooltip="Measures nonsense detection across plausible-sounding prompts in software, medical, legal, finance, and physics domains (higher is better)."
           link={{
@@ -483,13 +455,42 @@ export const columns = (
       sortUndefined: "last",
     },
 
+    // ─── Benchmarks: Vibe Code Bench ───
+    {
+      accessorKey: "vibeCodeBench",
+      header: ({ column }) => (
+        <ColumnHeader
+          column={column}
+          title="Vibe Code"
+          subtitle="v1.1 · %"
+          tooltip="End-to-end web application development accuracy — percentage of tests in which at least 90% of substeps succeed (higher is better)"
+          link={{
+            url: "https://vals.ai/benchmarks/vibe-code",
+            title: "Vibe Code Bench v1.1",
+          }}
+          sort={{ enabled: true }}
+        />
+      ),
+      cell: ({ row }) => (
+        <BarCell
+          value={row.original.vibeCodeBench}
+          min={vibeCodeBenchRange.min}
+          max={vibeCodeBenchRange.max}
+          color={COLORS.benchmark}
+          format={(v) => `${Math.round(v)}`}
+        />
+      ),
+      sortDescFirst: true,
+      sortUndefined: "last",
+    },
+
     // ─── Benchmarks: VendingBench ───
     {
       accessorKey: "VendingBench",
       header: ({ column }) => (
         <ColumnHeader
           column={column}
-          title="VendingBench"
+          title="Vending"
           subtitle="Net USD"
           tooltip="A benchmark for measuring AI model performance on running a business over a year; bank balance in the end (higher is better)"
           link={{
