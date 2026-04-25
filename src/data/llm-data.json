@@ -9,6 +9,7 @@
     "costAAIndex": 3357,
     "tokenUseAAIndex": 75,
     "ARCAGI2": 85,
+    "simpleBench": 69,
     "VendingBench": 7523.84
   },
   {
@@ -268,7 +269,7 @@
     "tokenUseAAIndex": 58
   },
   {
-    "model": "NVIDIA Nemotron 3 Super",
+    "model": "Nemotron 3 Super",
     "developer": "Nvidia",
     "releaseDate": "2026-03-11",
     "modelUrl": "https://developer.nvidia.com/blog/introducing-nemotron-3-super-an-open-hybrid-mamba-transformer-moe-for-agentic-reasoning/",
@@ -298,6 +299,7 @@
     "outputSpeed": 106.3,
     "costAAIndex": 948,
     "tokenUseAAIndex": 170,
+    "VendingBench": 6204.57,
     "bullshitBench": 65,
     "hasVision": true
   },
@@ -318,7 +320,7 @@
     "VendingBench": 1198.46
   },
   {
-    "model": "GLM-5",
+    "model": "GLM 5",
     "developer": "Z AI",
     "releaseDate": "2026-02-12",
     "modelUrl": "https://z.ai/blog/glm-5",
@@ -333,7 +335,7 @@
     "VendingBench": 4432.12
   },
   {
-    "model": "GLM-5.1",
+    "model": "GLM 5.1",
     "developer": "Z AI",
     "releaseDate": "2026-04-07",
     "modelUrl": "https://z.ai/blog/glm-5.1",
@@ -345,7 +347,7 @@
     "VendingBench": 5634.41
   },
   {
-    "model": "GLM-4.7",
+    "model": "GLM 4.7",
     "developer": "Z AI",
     "releaseDate": "2025-12-22",
     "modelUrl": "https://z.ai/blog/glm-4.7",
@@ -358,7 +360,29 @@
     "VendingBench": 2376.82
   },
   {
-    "model": "Qwen 3.5-397B-A17B",
+    "model": "Qwen 3.6 Plus",
+    "developer": "Qwen",
+    "releaseDate": "2026-04-02",
+    "hasVision": true,
+    "AAIndex": 50,
+    "outputSpeed": 50.4,
+    "costAAIndex": 482.65,
+    "tokenUseAAIndex": 100,
+    "VendingBench": 5114.87
+  },
+  {
+    "model": "Qwen 3.6 Max",
+    "developer": "Qwen",
+    "modelUrl": "https://qwen.ai/blog?id=qwen3.6-max-preview",
+    "releaseDate": "2026-04-18",
+    "AAIndex": 52,
+    "outputSpeed": 33.4,
+    "costAAIndex": 861,
+    "tokenUseAAIndex": 74,
+    "VendingBench": 4254.19
+  },
+  {
+    "model": "Qwen 3.5 397B A17B",
     "developer": "Qwen",
     "releaseDate": "2026-02-13",
     "modelUrl": "https://qwen.ai/blog?id=qwen3.5",
@@ -369,17 +393,6 @@
     "tokenUseAAIndex": 86,
     "bullshitBench": 78.0,
     "VendingBench": 0.54
-  },
-  {
-    "model": "Qwen3.6 Plus",
-    "developer": "Qwen",
-    "releaseDate": "2026-04-02",
-    "hasVision": true,
-    "AAIndex": 50,
-    "outputSpeed": 50.4,
-    "costAAIndex": 482.65,
-    "tokenUseAAIndex": 100,
-    "VendingBench": 5114.87
   },
   {
     "model": "Step 3.5 Flash 2603",
@@ -415,6 +428,17 @@
     "tokenUseAAIndex": 87
   },
   {
+    "model": "DeepSeek V4 Pro",
+    "developer": "DeepSeek",
+    "releaseDate": "2026-04-24",
+    "modelUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+    "AAIndex": 52,
+    "outputSpeed": 35.8,
+    "costAAIndex": 1071,
+    "tokenUseAAIndex": 190,
+    "simpleBench": 61.2
+  },
+  {
     "model": "DeepSeek V4 Flash",
     "developer": "DeepSeek",
     "releaseDate": "2026-04-24",
@@ -439,7 +463,7 @@
     "VendingBench": 1034
   },
   {
-    "model": "MiMo-V2-Pro",
+    "model": "MiMo V2 Pro",
     "developer": "Xiaomi",
     "releaseDate": "2026-03-18",
     "modelUrl": "https://mimo.xiaomi.com/mimo-v2-pro",
@@ -451,7 +475,7 @@
     "maxOutputTokens": 131.1
   },
   {
-    "model": "MiMo-V2-Flash",
+    "model": "MiMo V2 Flash",
     "developer": "Xiaomi",
     "releaseDate": "2025-12-16",
     "modelUrl": "https://mimo.xiaomi.com/blog/mimo-v2-flash",
