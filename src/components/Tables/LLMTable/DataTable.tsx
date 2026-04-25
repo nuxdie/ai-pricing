@@ -1,4 +1,5 @@
 import {
+    ColumnOrderState,
     ColumnFiltersState,
     flexRender,
     getCoreRowModel,
@@ -9,16 +10,95 @@ import {
 } from "@tanstack/react-table";
 import { useCallback, useMemo, useState } from "react";
 import { columns as createColumns, columnGroups, ModelSortMode, MODEL_SORT_CYCLE } from "./columns";
+import { BENCHMARK_COLUMN_IDS } from "./columnIds";
 import { LLMModel } from "@/types/llm";
 
 interface DataTableProps {
     data: LLMModel[];
 }
 
+const BENCHMARK_COLUMN_ID_SET = new Set<string>(BENCHMARK_COLUMN_IDS);
+const COLUMN_ORDER_STORAGE_KEY = "llm-table-benchmark-column-order";
+const DEFAULT_COLUMN_ORDER = [
+    "model",
+    "AAIndex",
+    "costAAIndex",
+    "tokenUseAAIndex",
+    "outputSpeed",
+    ...BENCHMARK_COLUMN_IDS,
+    "hasVision",
+];
+const GROUP_START_COLUMN_IDS = new Set(["AAIndex", "costAAIndex", "outputSpeed", "hasVision"]);
+
+const getStoredBenchmarkOrder = (): string[] => {
+    if (typeof window === "undefined") return [...BENCHMARK_COLUMN_IDS];
+
+    try {
+        const stored = window.localStorage.getItem(COLUMN_ORDER_STORAGE_KEY);
+        if (!stored) return [...BENCHMARK_COLUMN_IDS];
+
+        const parsed = JSON.parse(stored);
+        if (!Array.isArray(parsed)) return [...BENCHMARK_COLUMN_IDS];
+
+        const seenIds = new Set<string>();
+        const validStoredIds = parsed.filter((id): id is string => {
+            if (!BENCHMARK_COLUMN_ID_SET.has(id) || seenIds.has(id)) return false;
+            seenIds.add(id);
+            return true;
+        });
+        const missingIds = BENCHMARK_COLUMN_IDS.filter((id) => !validStoredIds.includes(id));
+        return [...validStoredIds, ...missingIds];
+    } catch {
+        return [...BENCHMARK_COLUMN_IDS];
+    }
+};
+
+const createColumnOrder = (benchmarkOrder: string[]): ColumnOrderState => {
+    return DEFAULT_COLUMN_ORDER.map((columnId) => {
+        if (columnId === BENCHMARK_COLUMN_IDS[0]) {
+            return benchmarkOrder;
+        }
+        return BENCHMARK_COLUMN_ID_SET.has(columnId) ? [] : columnId;
+    }).flat();
+};
+
+const reorderBenchmarkColumns = (columnOrder: ColumnOrderState, fromId: string, toId: string) => {
+    if (fromId === toId || !BENCHMARK_COLUMN_ID_SET.has(fromId) || !BENCHMARK_COLUMN_ID_SET.has(toId)) {
+        return columnOrder;
+    }
+
+    const benchmarkOrder = columnOrder.filter((id) => BENCHMARK_COLUMN_ID_SET.has(id));
+    const fromIndex = benchmarkOrder.indexOf(fromId);
+    const toIndex = benchmarkOrder.indexOf(toId);
+    if (fromIndex === -1 || toIndex === -1) return columnOrder;
+
+    const nextBenchmarkOrder = [...benchmarkOrder];
+    const [movedColumnId] = nextBenchmarkOrder.splice(fromIndex, 1);
+    nextBenchmarkOrder.splice(toIndex, 0, movedColumnId);
+
+    return createColumnOrder(nextBenchmarkOrder);
+};
+
+const isInteractiveElement = (target: EventTarget | null) => {
+    return target instanceof HTMLElement && Boolean(target.closest("a, button, input, select, textarea"));
+};
+
+const persistBenchmarkOrder = (columnOrder: ColumnOrderState) => {
+    try {
+        const benchmarkOrder = columnOrder.filter((id) => BENCHMARK_COLUMN_ID_SET.has(id));
+        window.localStorage.setItem(COLUMN_ORDER_STORAGE_KEY, JSON.stringify(benchmarkOrder));
+    } catch {
+        // Ignore storage failures so dragging still works in restricted browser modes.
+    }
+};
+
 export function DataTable({ data }: DataTableProps) {
     const [sorting, setSorting] = useState<SortingState>([]);
     const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
     const [modelSortMode, setModelSortMode] = useState<ModelSortMode>(null);
+    const [draggedColumnId, setDraggedColumnId] = useState<string | null>(null);
+    const [dragOverColumnId, setDragOverColumnId] = useState<string | null>(null);
+    const [columnOrder, setColumnOrder] = useState<ColumnOrderState>(() => createColumnOrder(getStoredBenchmarkOrder()));
 
     const cycleModelSort = useCallback(() => {
         setModelSortMode((prev) => {
@@ -61,11 +141,59 @@ export function DataTable({ data }: DataTableProps) {
         getFilteredRowModel: getFilteredRowModel(),
         onSortingChange: handleSortingChange,
         onColumnFiltersChange: setColumnFilters,
+        onColumnOrderChange: setColumnOrder,
         state: {
             sorting,
             columnFilters,
+            columnOrder,
         },
     });
+
+    const handleBenchmarkDragStart = useCallback((e: React.DragEvent<HTMLTableCellElement>, columnId: string) => {
+        if (isInteractiveElement(e.target)) {
+            e.preventDefault();
+            return;
+        }
+
+        setDraggedColumnId(columnId);
+        e.dataTransfer.effectAllowed = "move";
+        e.dataTransfer.setData("text/plain", columnId);
+    }, []);
+
+    const handleBenchmarkDragOver = useCallback((e: React.DragEvent<HTMLTableCellElement>, columnId: string) => {
+        if (!draggedColumnId || draggedColumnId === columnId) return;
+
+        e.preventDefault();
+        e.dataTransfer.dropEffect = "move";
+        setDragOverColumnId(columnId);
+    }, [draggedColumnId]);
+
+    const handleBenchmarkDrop = useCallback((e: React.DragEvent<HTMLTableCellElement>, columnId: string) => {
+        e.preventDefault();
+
+        const fromColumnId = e.dataTransfer.getData("text/plain") || draggedColumnId;
+        if (!fromColumnId) return;
+
+        setColumnOrder((currentOrder) => {
+            const nextOrder = reorderBenchmarkColumns(currentOrder, fromColumnId, columnId);
+            persistBenchmarkOrder(nextOrder);
+            return nextOrder;
+        });
+        setDraggedColumnId(null);
+        setDragOverColumnId(null);
+    }, [draggedColumnId]);
+
+    const handleBenchmarkDragEnd = useCallback(() => {
+        setDraggedColumnId(null);
+        setDragOverColumnId(null);
+    }, []);
+
+    const isGroupStartColumn = useCallback((columnId: string) => {
+        if (GROUP_START_COLUMN_IDS.has(columnId)) return true;
+
+        const firstBenchmarkColumnId = columnOrder.find((id) => BENCHMARK_COLUMN_ID_SET.has(id));
+        return columnId === firstBenchmarkColumnId;
+    }, [columnOrder]);
 
     return (
         <table className="w-full border-collapse text-[12px]">
@@ -89,13 +217,25 @@ export function DataTable({ data }: DataTableProps) {
                 {table.getHeaderGroups().map((headerGroup) => (
                     <tr key={headerGroup.id} className="bg-slate-50 border-b border-slate-200 dark:bg-slate-900 dark:border-slate-800">
                         {headerGroup.headers.map((header) => {
-                            const isGroupStart = (header.column.columnDef.meta as any)?.groupStart;
+                            const isBenchmarkColumn = BENCHMARK_COLUMN_ID_SET.has(header.column.id);
+                            const isGroupStart = isGroupStartColumn(header.column.id);
+                            const isDragOver = dragOverColumnId === header.column.id;
                             return (
                                 <th
                                     key={header.id}
-                                    className={`text-left align-bottom font-medium text-slate-500 dark:text-slate-400 px-1.5 py-1 ${
+                                    draggable={isBenchmarkColumn}
+                                    onDragStart={isBenchmarkColumn ? (e) => handleBenchmarkDragStart(e, header.column.id) : undefined}
+                                    onDragOver={isBenchmarkColumn ? (e) => handleBenchmarkDragOver(e, header.column.id) : undefined}
+                                    onDrop={isBenchmarkColumn ? (e) => handleBenchmarkDrop(e, header.column.id) : undefined}
+                                    onDragEnd={isBenchmarkColumn ? handleBenchmarkDragEnd : undefined}
+                                    title={isBenchmarkColumn ? "Drag to rearrange benchmark columns" : undefined}
+                                    className={`text-left align-bottom font-medium text-slate-500 dark:text-slate-400 px-1.5 py-1 transition-colors ${
                                          isGroupStart ? "group-border-l" : ""
-                                     }`}
+                                      } ${
+                                         isBenchmarkColumn ? "cursor-grab active:cursor-grabbing" : ""
+                                      } ${
+                                         isDragOver ? "bg-indigo-50 dark:bg-indigo-950/40" : ""
+                                      }`}
                                     style={{ width: `${header.getSize()}px` }}
                                 >
                                     {header.isPlaceholder
@@ -123,7 +263,7 @@ export function DataTable({ data }: DataTableProps) {
                             `}
                         >
                             {row.getVisibleCells().map((cell) => {
-                                const isGroupStart = (cell.column.columnDef.meta as any)?.groupStart;
+                                const isGroupStart = isGroupStartColumn(cell.column.id);
                                 return (
                                     <td
                                         key={cell.id}

@@ -1,7 +1,9 @@
-export function getColumnMinMax(data: any[], accessor: string) {
+export function getColumnMinMax<T extends object>(data: T[], accessor: keyof T) {
     const values = data
-        .map(item => item[accessor])
-        .filter(val => val !== null && val !== undefined);
+        .flatMap((item) => {
+            const value = item[accessor];
+            return typeof value === "number" ? [value] : [];
+        });
     return {
         min: Math.min(...values),
         max: Math.max(...values)
