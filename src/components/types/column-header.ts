@@ -24,5 +24,6 @@ export interface ColumnHeaderProps {
         enabled: boolean;
         descFirst?: boolean;
     };
+    draggable?: boolean;       // Show a subtle drag affordance
     verticalText?: boolean;    // Display header text vertically
 }

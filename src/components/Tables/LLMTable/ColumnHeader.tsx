@@ -14,6 +14,7 @@ export function ColumnHeader({
     link,
     filter,
     sort,
+    draggable,
     verticalText
 }: ColumnHeaderProps) {
     const isSorted = column.getIsSorted();
@@ -36,6 +37,22 @@ export function ColumnHeader({
         </svg>
     );
 
+    const DragHandle = () => (
+        <span
+            aria-hidden="true"
+            className="inline-flex h-3 w-2 shrink-0 items-center justify-center text-slate-300 transition-colors group-hover/header:text-slate-400 dark:text-slate-600 dark:group-hover/header:text-slate-500"
+        >
+            <svg className="h-3 w-2" viewBox="0 0 8 12" fill="currentColor">
+                <circle cx="2" cy="2" r="1" />
+                <circle cx="6" cy="2" r="1" />
+                <circle cx="2" cy="6" r="1" />
+                <circle cx="6" cy="6" r="1" />
+                <circle cx="2" cy="10" r="1" />
+                <circle cx="6" cy="10" r="1" />
+            </svg>
+        </span>
+    );
+
     const handleHeaderClick = (e: React.MouseEvent) => {
         if (sort?.enabled) {
             e.preventDefault();
@@ -50,7 +67,7 @@ export function ColumnHeader({
                 <Tooltip>
                     <TooltipTrigger asChild>
                         <div
-                            className={`rounded cursor-pointer select-none py-0.5 ${
+                            className={`group/header rounded cursor-pointer select-none py-0.5 ${
                                 sort?.enabled ? "hover:bg-slate-100 dark:hover:bg-slate-800" : ""
                             } ${verticalText
                                 ? '[writing-mode:vertical-rl] rotate-180 whitespace-nowrap flex flex-col items-start justify-center gap-0.5'
@@ -84,6 +101,7 @@ export function ColumnHeader({
                             </div>
 
                             <div className={`flex items-center ${verticalText ? 'gap-0.5' : 'gap-0'}`}>
+                                {draggable && <DragHandle />}
                                 {link && verticalText && (
                                     <a
                                         href={link.url}

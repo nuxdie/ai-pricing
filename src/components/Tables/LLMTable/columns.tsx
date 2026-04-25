@@ -381,6 +381,7 @@ export const columns = (
             title: "Simple Bench Leaderboard Table",
           }}
           sort={{ enabled: true }}
+          draggable
         />
       ),
       cell: ({ row }) => (
@@ -411,6 +412,7 @@ export const columns = (
             title: "ARC-AGI-2 Leaderboard",
           }}
           sort={{ enabled: true }}
+          draggable
         />
       ),
       cell: ({ row }) => (
@@ -440,6 +442,7 @@ export const columns = (
             title: "BullshitBench v2",
           }}
           sort={{ enabled: true }}
+          draggable
         />
       ),
       cell: ({ row }) => (
@@ -469,6 +472,7 @@ export const columns = (
             title: "Vibe Code Bench v1.1",
           }}
           sort={{ enabled: true }}
+          draggable
         />
       ),
       cell: ({ row }) => (
@@ -499,6 +503,7 @@ export const columns = (
           }}
           filter={{ type: "range", enabled: true, showMax: false }}
           sort={{ enabled: true }}
+          draggable
         />
       ),
       cell: ({ row }) => {
