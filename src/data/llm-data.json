@@ -240,10 +240,23 @@
     "bullshitBench": 25
   },
   {
-    "model": "Grok 4.20 Beta 0309",
+    "model": "Grok 4.3",
+    "developer": "xAI",
+    "releaseDate": "2026-04-17",
+    "modelUrl": "https://grok.com/release-notes/apr-17-2026",
+    "hasVision": true,
+    "AAIndex": 53,
+    "outputSpeed": 196.1,
+    "costAAIndex": 395,
+    "tokenUseAAIndex": 88,
+    "VendingBench": 704.98,
+    "vibeCodeBench": 19.4
+  },
+  {
+    "model": "Grok 4.20",
     "developer": "xAI",
     "releaseDate": "2026-03-10",
-    "modelUrl": "https://artificialanalysis.ai/models/grok-4-20",
+    "modelUrl": "https://docs.x.ai/developers/models/grok-4.20-beta-0309-reasoning",
     "hasVision": true,
     "AAIndex": 48,
     "costAAIndex": 484.42,
@@ -478,6 +491,18 @@
     "bullshitBench": 13,
     "VendingBench": 1034,
     "vibeCodeBench": 5.11
+  },
+  {
+    "model": "MiMo V2.5 Pro",
+    "developer": "Xiaomi",
+    "releaseDate": "2026-04-27",
+    "modelUrl": "https://mimo.xiaomi.com/mimo-v2-5-pro",
+    "AAIndex": 54,
+    "outputSpeed": 60.8,
+    "costAAIndex": 462,
+    "tokenUseAAIndex": 92,
+    "bullshitBench": 62,
+    "hasVision": true
   },
   {
     "model": "MiMo V2 Pro",
