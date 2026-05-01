@@ -7,6 +7,8 @@
     "hasVision": true,
     "AAIndex": 60,
     "costAAIndex": 3357,
+    "bullshitBench": 47,
+    "outputSpeed": 65.3,
     "tokenUseAAIndex": 75,
     "ARCAGI2": 85,
     "simpleBench": 69,
@@ -202,7 +204,7 @@
     "vibeCodeBench": 32.03
   },
   {
-    "model": "Gemini 3.1 Flash-Lite",
+    "model": "Gemini 3.1 Flash Lite",
     "developer": "Google AI",
     "releaseDate": "2026-03-04",
     "modelUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/",
