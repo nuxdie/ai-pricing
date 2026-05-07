@@ -21,6 +21,7 @@ const BENCHMARK_COLUMN_ID_SET = new Set<string>(BENCHMARK_COLUMN_IDS);
 const COLUMN_ORDER_STORAGE_KEY = "llm-table-benchmark-column-order";
 const DEFAULT_COLUMN_ORDER = [
     "model",
+    "parametersB",
     "AAIndex",
     "costAAIndex",
     "tokenUseAAIndex",

@@ -33,6 +33,8 @@ export interface LLMModel {
     releaseDate?: string; // Model release date (ISO 8601, YYYY-MM-DD)
     developer: string;
     hasReasoning?: boolean; // Add the new property for thinking/reasoning mode
+    parametersB?: number | null; // Model parameter count, billions
+    parametersEstimated?: boolean; // Whether parameter count is estimated
 }
 
 export interface CalculatorState {

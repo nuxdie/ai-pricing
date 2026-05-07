@@ -69,7 +69,7 @@ const agePillClasses = (days: number): string => {
 
 // Column group definitions — used by DataTable for group headers
 export const columnGroups = [
-  { label: "Model", span: 1 },
+  { label: "Model", span: 2 },
   { label: "Quality", span: 1 },
   { label: "Cost", span: 2 },
   { label: "Performance", span: 1 },
@@ -228,6 +228,42 @@ export const columns = (
         );
       },
       minSize: 170,
+    },
+
+    // ─── Model: Parameter count ───
+    {
+      accessorKey: "parametersB",
+      header: ({ column }) => (
+        <ColumnHeader
+          column={column}
+          title="Params"
+          subtitle="B"
+          tooltip="Model parameter count in billions. A trailing ~ marks an estimated value for closed-source models."
+          filter={{ type: "range", enabled: true }}
+          sort={{ enabled: true }}
+        />
+      ),
+      cell: ({ row }) => {
+        const value = row.original.parametersB;
+        if (value === null || value === undefined) {
+          return <div className="font-mono text-right px-1.5 py-px text-gray-300 dark:text-slate-600">&mdash;</div>;
+        }
+
+        const formatted = value >= 100 ? Math.round(value).toString() : value.toFixed(1).replace(/\.0$/, "");
+        return (
+          <div
+            className="font-mono text-right px-1.5 py-px text-[12px] leading-snug text-slate-600 dark:text-slate-300"
+            title={row.original.parametersEstimated ? "Estimated parameter count" : "Known parameter count"}
+          >
+            {formatted}{row.original.parametersEstimated ? "~" : ""}
+          </div>
+        );
+      },
+      sortingFn: "alphanumeric",
+      sortDescFirst: true,
+      sortUndefined: "last",
+      filterFn: createPriceRangeFilter,
+      maxSize: 64,
     },
 
     // ─── Quality: AAIndex ───

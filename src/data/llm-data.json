@@ -2,6 +2,8 @@
   {
     "model": "GPT 5.5",
     "developer": "OpenAI",
+    "parametersB": 1800,
+    "parametersEstimated": true,
     "releaseDate": "2026-04-23",
     "modelUrl": "https://openai.com/index/introducing-gpt-5-5/",
     "hasVision": true,
@@ -18,6 +20,8 @@
   {
     "model": "GPT 5.4",
     "developer": "OpenAI",
+    "parametersB": 1600,
+    "parametersEstimated": true,
     "releaseDate": "2026-03-05",
     "modelUrl": "https://openai.com/index/introducing-gpt-5-4/",
     "inputPriceCacheHit": 0.25,
@@ -34,6 +38,8 @@
   {
     "model": "GPT 5.4 mini",
     "developer": "OpenAI",
+    "parametersB": 120,
+    "parametersEstimated": true,
     "releaseDate": "2026-03-17",
     "modelUrl": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
     "inputPriceCacheHit": 0.075,
@@ -49,6 +55,8 @@
   {
     "model": "GPT 5.4 nano",
     "developer": "OpenAI",
+    "parametersB": 20,
+    "parametersEstimated": true,
     "releaseDate": "2026-03-17",
     "modelUrl": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
     "inputPriceCacheHit": 0.02,
@@ -64,6 +72,8 @@
   {
     "model": "GPT 5.2",
     "developer": "OpenAI",
+    "parametersB": 1200,
+    "parametersEstimated": true,
     "releaseDate": "2025-12-11",
     "modelUrl": "https://openai.com/index/introducing-gpt-5-2/",
     "hasVision": true,
@@ -81,6 +91,7 @@
     "model": "GPT OSS 120B",
     "modelUrl": "https://openai.com/index/introducing-gpt-oss/",
     "developer": "OpenAI",
+    "parametersB": 120,
     "releaseDate": "2025-08-05",
     "AAIndex": 33,
     "outputSpeed": 3000,
@@ -94,6 +105,8 @@
   {
     "model": "Claude Opus 4.6",
     "developer": "Anthropic",
+    "parametersB": 2000,
+    "parametersEstimated": true,
     "releaseDate": "2026-02-05",
     "modelUrl": "https://www.anthropic.com/news/introducing-claude-opus-4-6",
     "maxOutputTokens": 128,
@@ -111,6 +124,8 @@
   {
     "model": "Claude Opus 4.7",
     "developer": "Anthropic",
+    "parametersB": 2200,
+    "parametersEstimated": true,
     "releaseDate": "2026-04-16",
     "modelUrl": "https://www.anthropic.com/news/claude-opus-4-7",
     "hasVision": true,
@@ -128,6 +143,8 @@
     "model": "Claude Opus 4.5",
     "modelUrl": "https://www.anthropic.com/news/claude-opus-4-5",
     "developer": "Anthropic",
+    "parametersB": 1800,
+    "parametersEstimated": true,
     "releaseDate": "2025-11-24",
     "AAIndex": 50,
     "outputSpeed": 56.8,
@@ -143,6 +160,8 @@
   {
     "model": "Claude Sonnet 4.5",
     "developer": "Anthropic",
+    "parametersB": 650,
+    "parametersEstimated": true,
     "releaseDate": "2025-09-29",
     "modelUrl": "https://www.anthropic.com/news/claude-sonnet-4-5",
     "AAIndex": 43,
@@ -159,6 +178,8 @@
   {
     "model": "Claude Sonnet 4.6",
     "developer": "Anthropic",
+    "parametersB": 750,
+    "parametersEstimated": true,
     "releaseDate": "2026-02-17",
     "modelUrl": "https://www.anthropic.com/news/claude-sonnet-4-6",
     "maxOutputTokens": 128,
@@ -175,6 +196,8 @@
   {
     "model": "Claude Haiku 4.5",
     "developer": "Anthropic",
+    "parametersB": 80,
+    "parametersEstimated": true,
     "releaseDate": "2025-10-15",
     "AAIndex": 37,
     "outputSpeed": 105,
@@ -190,6 +213,8 @@
   {
     "model": "Gemini 3.1 Pro",
     "developer": "Google AI",
+    "parametersB": 2000,
+    "parametersEstimated": true,
     "releaseDate": "2026-02-19",
     "modelUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
     "simpleBench": 79.6,
@@ -206,6 +231,8 @@
   {
     "model": "Gemini 3.1 Flash Lite",
     "developer": "Google AI",
+    "parametersB": 40,
+    "parametersEstimated": true,
     "releaseDate": "2026-03-04",
     "modelUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/",
     "AAIndex": 34,
@@ -219,6 +246,8 @@
   {
     "model": "Gemini 3 Flash",
     "developer": "Google AI",
+    "parametersB": 120,
+    "parametersEstimated": true,
     "releaseDate": "2025-12-17",
     "modelUrl": "https://blog.google/products/gemini/gemini-3-flash/",
     "AAIndex": 46,
@@ -234,6 +263,7 @@
   {
     "model": "Gemma 4 31B",
     "developer": "Google AI",
+    "parametersB": 31,
     "releaseDate": "2026-04-02",
     "hasVision": true,
     "AAIndex": 39,
@@ -244,6 +274,8 @@
   {
     "model": "Grok 4.3",
     "developer": "xAI",
+    "parametersB": 1700,
+    "parametersEstimated": true,
     "releaseDate": "2026-04-17",
     "modelUrl": "https://grok.com/release-notes/apr-17-2026",
     "hasVision": true,
@@ -257,6 +289,8 @@
   {
     "model": "Grok 4.20",
     "developer": "xAI",
+    "parametersB": 900,
+    "parametersEstimated": true,
     "releaseDate": "2026-03-10",
     "modelUrl": "https://docs.x.ai/developers/models/grok-4.20-beta-0309-reasoning",
     "hasVision": true,
@@ -273,6 +307,8 @@
     "model": "Grok 4.1 Fast",
     "modelUrl": "https://x.ai/news/grok-4-1-fast",
     "developer": "xAI",
+    "parametersB": 350,
+    "parametersEstimated": true,
     "releaseDate": "2025-11-19",
     "costAAIndex": 40,
     "tokenUseAAIndex": 53,
@@ -287,6 +323,8 @@
   {
     "model": "Muse Spark",
     "developer": "Meta",
+    "parametersB": 800,
+    "parametersEstimated": true,
     "releaseDate": "2026-04-08",
     "modelUrl": "https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/",
     "hasVision": true,
@@ -297,6 +335,8 @@
   {
     "model": "Nemotron 3 Super",
     "developer": "Nvidia",
+    "parametersB": 200,
+    "parametersEstimated": true,
     "releaseDate": "2026-03-11",
     "modelUrl": "https://developer.nvidia.com/blog/introducing-nemotron-3-super-an-open-hybrid-mamba-transformer-moe-for-agentic-reasoning/",
     "AAIndex": 36,
@@ -308,6 +348,8 @@
   {
     "model": "Mistral Medium 3.5",
     "developer": "Mistral",
+    "parametersB": 120,
+    "parametersEstimated": true,
     "releaseDate": "2026-04-29",
     "modelUrl": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5",
     "hasVision": true,
@@ -319,6 +361,8 @@
   {
     "model": "Mistral Small 4",
     "developer": "Mistral",
+    "parametersB": 24,
+    "parametersEstimated": true,
     "releaseDate": "2026-03-16",
     "modelUrl": "https://mistral.ai/news/mistral-small-4",
     "hasVision": true,
@@ -331,6 +375,8 @@
   {
     "model": "Kimi K2.6",
     "developer": "Moonshot AI",
+    "parametersB": 1000,
+    "parametersEstimated": true,
     "releaseDate": "2026-04-21",
     "modelUrl": "https://www.kimi.com/blog/kimi-k2-6",
     "AAIndex": 54,
@@ -345,6 +391,8 @@
   {
     "model": "Kimi K2.5",
     "developer": "Moonshot AI",
+    "parametersB": 1000,
+    "parametersEstimated": true,
     "releaseDate": "2026-01-27",
     "modelUrl": "https://www.kimi.com/blog/kimi-k2-5.html",
     "hasVision": true,
@@ -361,6 +409,8 @@
   {
     "model": "GLM 5",
     "developer": "Z AI",
+    "parametersB": 355,
+    "parametersEstimated": true,
     "releaseDate": "2026-02-12",
     "modelUrl": "https://z.ai/blog/glm-5",
     "AAIndex": 50,
@@ -376,6 +426,8 @@
   {
     "model": "GLM 5.1",
     "developer": "Z AI",
+    "parametersB": 355,
+    "parametersEstimated": true,
     "releaseDate": "2026-04-07",
     "modelUrl": "https://z.ai/blog/glm-5.1",
     "AAIndex": 51,
@@ -389,6 +441,8 @@
   {
     "model": "GLM 4.7",
     "developer": "Z AI",
+    "parametersB": 355,
+    "parametersEstimated": true,
     "releaseDate": "2025-12-22",
     "modelUrl": "https://z.ai/blog/glm-4.7",
     "AAIndex": 42,
@@ -402,6 +456,8 @@
   {
     "model": "Qwen 3.6 Plus",
     "developer": "Qwen",
+    "parametersB": 235,
+    "parametersEstimated": true,
     "releaseDate": "2026-04-02",
     "hasVision": true,
     "AAIndex": 50,
@@ -414,6 +470,8 @@
   {
     "model": "Qwen 3.6 Max",
     "developer": "Qwen",
+    "parametersB": 1000,
+    "parametersEstimated": true,
     "modelUrl": "https://qwen.ai/blog?id=qwen3.6-max-preview",
     "releaseDate": "2026-04-18",
     "AAIndex": 52,
@@ -425,6 +483,7 @@
   {
     "model": "Qwen 3.5 397B A17B",
     "developer": "Qwen",
+    "parametersB": 397,
     "releaseDate": "2026-02-13",
     "modelUrl": "https://qwen.ai/blog?id=qwen3.5",
     "hasVision": true,
@@ -438,6 +497,8 @@
   {
     "model": "Step 3.5 Flash 2603",
     "developer": "StepFun",
+    "parametersB": 175,
+    "parametersEstimated": true,
     "releaseDate": "2026-04-02",
     "modelUrl": "https://static.stepfun.com/blog/step-3.5-flash/",
     "AAIndex": 38,
@@ -447,6 +508,8 @@
   {
     "model": "MiniMax M2.5",
     "developer": "MiniMax",
+    "parametersB": 230,
+    "parametersEstimated": true,
     "releaseDate": "2026-02-12",
     "modelUrl": "https://www.minimax.io/news/minimax-m25",
     "AAIndex": 42,
@@ -461,6 +524,8 @@
   {
     "model": "MiniMax M2.7",
     "developer": "MiniMax",
+    "parametersB": 230,
+    "parametersEstimated": true,
     "releaseDate": "2026-03-18",
     "modelUrl": "https://www.minimax.io/news/minimax-m27-en",
     "AAIndex": 50,
@@ -472,6 +537,8 @@
   {
     "model": "DeepSeek V4 Pro",
     "developer": "DeepSeek",
+    "parametersB": 671,
+    "parametersEstimated": true,
     "releaseDate": "2026-04-24",
     "modelUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
     "AAIndex": 52,
@@ -484,6 +551,8 @@
   {
     "model": "DeepSeek V4 Flash",
     "developer": "DeepSeek",
+    "parametersB": 671,
+    "parametersEstimated": true,
     "releaseDate": "2026-04-24",
     "modelUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
     "AAIndex": 47,
@@ -495,6 +564,7 @@
   {
     "model": "DeepSeek V3.2",
     "developer": "DeepSeek",
+    "parametersB": 671,
     "releaseDate": "2025-12-01",
     "modelUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V3.2",
     "AAIndex": 42,
@@ -509,6 +579,8 @@
   {
     "model": "MiMo V2.5 Pro",
     "developer": "Xiaomi",
+    "parametersB": 320,
+    "parametersEstimated": true,
     "releaseDate": "2026-04-27",
     "modelUrl": "https://mimo.xiaomi.com/mimo-v2-5-pro",
     "AAIndex": 54,
@@ -521,6 +593,8 @@
   {
     "model": "MiMo V2 Pro",
     "developer": "Xiaomi",
+    "parametersB": 320,
+    "parametersEstimated": true,
     "releaseDate": "2026-03-18",
     "modelUrl": "https://mimo.xiaomi.com/mimo-v2-pro",
     "AAIndex": 49,
@@ -533,6 +607,8 @@
   {
     "model": "MiMo V2 Flash",
     "developer": "Xiaomi",
+    "parametersB": 70,
+    "parametersEstimated": true,
     "releaseDate": "2025-12-16",
     "modelUrl": "https://mimo.xiaomi.com/blog/mimo-v2-flash",
     "AAIndex": 41,
