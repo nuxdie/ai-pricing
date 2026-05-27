@@ -462,6 +462,7 @@
     "AAIndex": 52,
     "outputSpeed": 33.4,
     "costAAIndex": 861,
+    "simpleBench": 63,
     "tokenUseAAIndex": 74,
     "VendingBench": 4254.19
   },
