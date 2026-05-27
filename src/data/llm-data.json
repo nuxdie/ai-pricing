@@ -189,6 +189,21 @@
     "vibeCodeBench": 11.39
   },
   {
+    "model": "Gemini 3.5 Flash",
+    "developer": "Google AI",
+    "releaseDate": "2026-05-19",
+    "modelUrl": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+    "AAIndex": 55,
+    "outputSpeed": 207.9,
+    "costAAIndex": 1552,
+    "tokenUseAAIndex": 73,
+    "simpleBench": 76.7,
+    "bullshitBench": 20,
+    "vibeCodeBench": 48.68,
+    "VendingBench": 5396.42,
+    "hasVision": true
+  },
+  {
     "model": "Gemini 3.1 Pro",
     "developer": "Google AI",
     "releaseDate": "2026-02-19",
@@ -408,6 +423,21 @@
     "tokenUseAAIndex": 170,
     "simpleBench": 47.7,
     "VendingBench": 2376.82
+  },
+  {
+    "model": "Qwen 3.7 Max",
+    "developer": "Qwen",
+    "modelUrl": "https://qwen.ai/blog?id=qwen3.7",
+    "parametersB": 235,
+    "parametersEstimated": true,
+    "releaseDate": "2026-05-20",
+    "hasVision": true,
+    "AAIndex": 57,
+    "outputSpeed": 210.2,
+    "costAAIndex": 1202,
+    "tokenUseAAIndex": 97,
+    "simpleBench": 70.4,
+    "bullshitBench": 71
   },
   {
     "model": "Qwen 3.6 Plus",
