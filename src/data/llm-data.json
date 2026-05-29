@@ -157,22 +157,6 @@
     "vibeCodeBench": 20.63
   },
   {
-    "model": "Claude Sonnet 4.5",
-    "developer": "Anthropic",
-    "releaseDate": "2025-09-29",
-    "modelUrl": "https://www.anthropic.com/news/claude-sonnet-4-5",
-    "AAIndex": 43,
-    "outputSpeed": 51.5,
-    "costAAIndex": 733,
-    "simpleBench": 54.3,
-    "bullshitBench": 79.0,
-    "hasVision": true,
-    "ARCAGI2": 13.6,
-    "tokenUseAAIndex": 25,
-    "VendingBench": 3838.74,
-    "vibeCodeBench": 22.62
-  },
-  {
     "model": "Claude Sonnet 4.6",
     "developer": "Anthropic",
     "releaseDate": "2026-02-17",
@@ -187,6 +171,22 @@
     "tokenUseAAIndex": 200,
     "VendingBench": 7204.14,
     "vibeCodeBench": 51.48
+  },
+  {
+    "model": "Claude Sonnet 4.5",
+    "developer": "Anthropic",
+    "releaseDate": "2025-09-29",
+    "modelUrl": "https://www.anthropic.com/news/claude-sonnet-4-5",
+    "AAIndex": 43,
+    "outputSpeed": 51.5,
+    "costAAIndex": 733,
+    "simpleBench": 54.3,
+    "bullshitBench": 79.0,
+    "hasVision": true,
+    "ARCAGI2": 13.6,
+    "tokenUseAAIndex": 25,
+    "VendingBench": 3838.74,
+    "vibeCodeBench": 22.62
   },
   {
     "model": "Claude Haiku 4.5",
