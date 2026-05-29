@@ -93,21 +93,19 @@
     "simpleBench": 22.1
   },
   {
-    "model": "Claude Opus 4.6",
+    "model": "Claude Opus 4.8",
     "developer": "Anthropic",
-    "releaseDate": "2026-02-05",
-    "modelUrl": "https://www.anthropic.com/news/introducing-claude-opus-4-6",
-    "maxOutputTokens": 128,
+    "releaseDate": "2026-05-28",
+    "modelUrl": "https://www.anthropic.com/news/claude-opus-4-8",
     "hasVision": true,
-    "AAIndex": 53,
-    "outputSpeed": 53,
-    "simpleBench": 67.6,
-    "ARCAGI2": 68.8,
-    "bullshitBench": 87.0,
-    "VendingBench": 8017.59,
-    "costAAIndex": 4970,
-    "tokenUseAAIndex": 160,
-    "vibeCodeBench": 57.57
+    "AAIndex": 61,
+    "outputSpeed": 62.1,
+    "costAAIndex": 4686,
+    "tokenUseAAIndex": 112,
+    "VendingBench": 5787.43,
+    "simpleBench": 64.8,
+    "bullshitBench": 95,
+    "vibeCodeBench": 82.72
   },
   {
     "model": "Claude Opus 4.7",
@@ -124,6 +122,23 @@
     "bullshitBench": 74,
     "VendingBench": 10936.76,
     "vibeCodeBench": 71.0
+  },
+  {
+    "model": "Claude Opus 4.6",
+    "developer": "Anthropic",
+    "releaseDate": "2026-02-05",
+    "modelUrl": "https://www.anthropic.com/news/introducing-claude-opus-4-6",
+    "maxOutputTokens": 128,
+    "hasVision": true,
+    "AAIndex": 53,
+    "outputSpeed": 53,
+    "simpleBench": 67.6,
+    "ARCAGI2": 68.8,
+    "bullshitBench": 87.0,
+    "VendingBench": 8017.59,
+    "costAAIndex": 4970,
+    "tokenUseAAIndex": 160,
+    "vibeCodeBench": 57.57
   },
   {
     "model": "Claude Opus 4.5",
