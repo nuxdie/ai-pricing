@@ -509,16 +509,6 @@
     "hasVision": true
   },
   {
-    "model": "Step 3.5 Flash 2603",
-    "developer": "StepFun",
-    "parametersB": 196,
-    "releaseDate": "2026-04-02",
-    "modelUrl": "https://static.stepfun.com/blog/step-3.5-flash/",
-    "AAIndex": 38,
-    "outputSpeed": 200.4,
-    "tokenUseAAIndex": 260
-  },
-  {
     "model": "MiniMax M3",
     "developer": "MiniMax",
     "releaseDate": "2026-06-01",
