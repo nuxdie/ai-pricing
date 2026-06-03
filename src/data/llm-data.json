@@ -496,6 +496,18 @@
     "VendingBench": 0.54
   },
   {
+    "model": " Step 3.7 Flash",
+    "developer": "StepFun",
+    "modelUrl": "https://static.stepfun.com/blog/step-3.7-flash/",
+    "releaseDate": "2026-05-29",
+    "parametersB": 198,
+    "AAIndex": 43,
+    "outputSpeed": 412.1,
+    "costAAIndex": 368,
+    "tokenUseAAIndex": 258,
+    "hasVision": true
+  },
+  {
     "model": "Step 3.5 Flash 2603",
     "developer": "StepFun",
     "parametersB": 196,
