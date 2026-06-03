@@ -452,6 +452,7 @@
     "costAAIndex": 1202,
     "tokenUseAAIndex": 97,
     "simpleBench": 70.4,
+    "vibeCodeBench": 47.67,
     "bullshitBench": 71
   },
   {
@@ -516,6 +517,17 @@
     "AAIndex": 38,
     "outputSpeed": 200.4,
     "tokenUseAAIndex": 260
+  },
+  {
+    "model": "MiniMax M3",
+    "developer": "MiniMax",
+    "releaseDate": "2026-06-01",
+    "modelUrl": "https://www.minimax.io/blog/minimax-m3",
+    "vibeCodeBench": 47.57,
+    "hasVision": true,
+    "bullshitBench": 63,
+    "outputSpeed": 28,
+    "outputSpeedSource": "OpenRouter/MiniMax"
   },
   {
     "model": "MiniMax M2.5",
