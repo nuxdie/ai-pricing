@@ -307,7 +307,7 @@ export const columns = (
       header: ({ column }) => (
         <ColumnHeader
           column={column}
-          title="Cost to Run AAIndex"
+          title="Cost"
           subtitle="USD"
           tooltip="Cost (USD) to run all evaluations in the Artificial Analysis Intelligence Index. Lower is better."
           link={{
@@ -337,7 +337,7 @@ export const columns = (
       header: ({ column }) => (
         <ColumnHeader
           column={column}
-          title="Token Use"
+          title="Hunger"
           subtitle="MTok"
           tooltip="Output Tokens Used to Run Artificial Analysis Intelligence Index, Millions (lower is better)"
           link={{
