@@ -513,11 +513,14 @@
     "developer": "MiniMax",
     "releaseDate": "2026-06-01",
     "modelUrl": "https://www.minimax.io/blog/minimax-m3",
+    "AAIndex": 55,
+    "costAAIndex": 308.34,
+    "tokenUseAAIndex": 91,
     "vibeCodeBench": 47.57,
     "hasVision": true,
+    "hasReasoning": true,
     "bullshitBench": 63,
-    "outputSpeed": 28,
-    "outputSpeedSource": "OpenRouter/MiniMax"
+    "outputSpeed": 41.3
   },
   {
     "model": "MiniMax M2.5",
