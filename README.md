@@ -1,4 +1,4 @@
-# AI Model Pricing Comparison
+# AI Model Comparison
 
 A fast, interactive web app for comparing AI models across the metrics that actually matter when choosing what to use: cost, speed, verbosity and benchmark performance.
 
