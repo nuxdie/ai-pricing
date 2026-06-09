@@ -342,6 +342,20 @@
     "vibeCodeBench": 19.67
   },
   {
+    "model": "Nemotron 3 Ultra",
+    "developer": "Nvidia",
+    "parametersB": 550,
+    "releaseDate": "2026-06-04",
+    "modelUrl": "https://research.nvidia.com/labs/nemotron/Nemotron-3-Ultra/",
+    "hasReasoning": true,
+    "AAIndex": 48,
+    "costAAIndex": 386.89,
+    "tokenUseAAIndex": 100,
+    "outputSpeed": 172.4,
+    "simpleBench": 41.7,
+    "bullshitBench": 49.0
+  },
+  {
     "model": "Nemotron 3 Super",
     "developer": "Nvidia",
     "parametersB": 120.6,
@@ -350,7 +364,7 @@
     "AAIndex": 36,
     "costAAIndex": 151,
     "tokenUseAAIndex": 110,
-    "bullshitBench": 47,
+    "bullshitBench": 54.0,
     "outputSpeed": 423.9
   },
   {
