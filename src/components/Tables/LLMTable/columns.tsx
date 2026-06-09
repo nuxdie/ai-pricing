@@ -471,7 +471,7 @@ export const columns = (
         <ColumnHeader
           column={column}
           title="Bullshit"
-          subtitle="v2 · %"
+          subtitle="v2 · % pushback+refusal"
           tooltip="Measures nonsense detection across plausible-sounding prompts in software, medical, legal, finance, and physics domains (higher is better)."
           link={{
             url: "https://petergpt.github.io/bullshit-benchmark/viewer/index.v2.html",

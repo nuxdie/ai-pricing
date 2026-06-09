@@ -93,6 +93,19 @@
     "simpleBench": 22.1
   },
   {
+    "model": "Claude Fable 5",
+    "developer": "Anthropic",
+    "releaseDate": "2026-06-09",
+    "modelUrl": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+    "hasVision": true,
+    "hasReasoning": true,
+    "AAIndex": 65,
+    "outputSpeed": 66,
+    "VendingBench": 4966.64,
+    "vibeCodeBench": 90.35,
+    "bullshitBench": 89.0
+  },
+  {
     "model": "Claude Opus 4.8",
     "developer": "Anthropic",
     "releaseDate": "2026-05-28",
@@ -104,6 +117,7 @@
     "tokenUseAAIndex": 112,
     "VendingBench": 5787.43,
     "simpleBench": 64.8,
+    "ARCAGI2": 72.1,
     "bullshitBench": 95,
     "vibeCodeBench": 82.72
   },
@@ -115,7 +129,7 @@
     "hasVision": true,
     "AAIndex": 57,
     "outputSpeed": 45.2,
-    "simpleBench": 62.9,
+    "simpleBench": 61.7,
     "costAAIndex": 4406.45,
     "tokenUseAAIndex": 100,
     "ARCAGI2": 75.8,
@@ -213,6 +227,7 @@
     "costAAIndex": 1552,
     "tokenUseAAIndex": 73,
     "simpleBench": 76.7,
+    "ARCAGI2": 72.1,
     "bullshitBench": 20,
     "vibeCodeBench": 48.68,
     "VendingBench": 5396.42,
@@ -283,7 +298,7 @@
     "outputSpeed": 196.1,
     "costAAIndex": 395,
     "tokenUseAAIndex": 88,
-    "VendingBench": 704.98,
+    "VendingBench": 35.26,
     "vibeCodeBench": 19.4
   },
   {
@@ -348,7 +363,8 @@
     "AAIndex": 39,
     "outputSpeed": 143.2,
     "costAAIndex": 1001,
-    "tokenUseAAIndex": 90
+    "tokenUseAAIndex": 90,
+    "vibeCodeBench": 2.89
   },
   {
     "model": "Mistral Small 4",
@@ -361,7 +377,8 @@
     "outputSpeed": 142.3,
     "bullshitBench": 6,
     "costAAIndex": 46.66,
-    "tokenUseAAIndex": 52
+    "tokenUseAAIndex": 52,
+    "vibeCodeBench": 0.0
   },
   {
     "model": "Kimi K2.6",
@@ -466,7 +483,7 @@
     "costAAIndex": 482.65,
     "tokenUseAAIndex": 100,
     "VendingBench": 5114.87,
-    "vibeCodeBench": 25.56
+    "vibeCodeBench": 25.57
   },
   {
     "model": "Qwen 3.6 Max",
@@ -494,7 +511,8 @@
     "costAAIndex": 418,
     "tokenUseAAIndex": 86,
     "bullshitBench": 78.0,
-    "VendingBench": 0.54
+    "VendingBench": 0.54,
+    "vibeCodeBench": 15.74
   },
   {
     "model": " Step 3.7 Flash",
@@ -548,7 +566,7 @@
     "outputSpeed": 48.6,
     "costAAIndex": 175.51,
     "tokenUseAAIndex": 87,
-    "vibeCodeBench": 27.04
+    "vibeCodeBench": 11.93
   },
   {
     "model": "DeepSeek V4 Pro",
@@ -560,7 +578,8 @@
     "outputSpeed": 35.8,
     "costAAIndex": 1071,
     "tokenUseAAIndex": 190,
-    "simpleBench": 61.2,
+    "simpleBench": 50.9,
+    "VendingBench": 3284.52,
     "vibeCodeBench": 49.93
   },
   {
@@ -573,6 +592,7 @@
     "outputSpeed": 83.8,
     "costAAIndex": 113,
     "tokenUseAAIndex": 240,
+    "simpleBench": 46.3,
     "hasVision": true
   },
   {
