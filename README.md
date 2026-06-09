@@ -1,6 +1,6 @@
 # AI Model Pricing Comparison
 
-A fast, interactive web app for comparing AI models across the metrics that actually matter when choosing what to use: price, context window, speed, benchmark performance, vision support, and free-tier availability.
+A fast, interactive web app for comparing AI models across the metrics that actually matter when choosing what to use: cost, speed, verbosity and benchmark performance.
 
 Live demo: [ai.tsatsin.com](https://ai.tsatsin.com/)
 
@@ -10,50 +10,23 @@ When you're comparing models across providers, the information is usually scatte
 
 Useful when you want to answer questions like:
 - Which model gives the best price/performance tradeoff right now?
-- How much more do you pay for a larger context window or better coding scores?
-- Which providers have vision support, free tiers, or unusually fast output?
+- How much more do you pay for a faster model or better coding scores?
 - Which model is worth testing before wiring it into a product or workflow?
 
-## What you can compare
-
-### LLM metrics
-- Arena ELO scores (general and coding)
-- Processing speed (tokens/second)
-- Context window size
-- Input and output pricing per million tokens
-- Vision capabilities
-- Free tier availability
-
 ### App features
-- Sortable columns for fast comparison
+- Sortable, filterable and draggable columns for fast comparison
 - Tooltips that explain less obvious metrics
-- Direct links to official provider pricing pages
+- Direct links to official model pages
 - Regular data updates as models and pricing change
 
 ## Data sources
 - Public benchmark data
-- Official provider pricing and documentation
 - Ongoing manual updates as models evolve
-
-## Tech stack
-- TypeScript
-- React
-- Vite
-- Tailwind CSS
-
-## Local development
-
-```bash
-npm install
-npm run dev
-```
-
-Then open the local Vite URL shown in the terminal.
 
 ## Contributing
 
 Contributions are welcome, especially for:
-- pricing/data corrections
+- data corrections
 - newly released models
 - UX improvements
 - documentation fixes
