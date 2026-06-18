@@ -94,21 +94,6 @@
     "vibeCodeBench": 55.77
   },
   {
-    "model": "Claude Haiku 4.5",
-    "developer": "Anthropic",
-    "releaseDate": "2025-10-15",
-    "AAIndex": 30,
-    "costAAIndex": 539,
-    "tokenUseAAIndex": 88,
-    "outputSpeed": 107,
-    "hasVision": true,
-    "ARCAGI2": 4,
-    "bullshitBench": 77.0,
-    "VendingBench": 458.89,
-    "modelUrl": "https://www.anthropic.com/news/claude-haiku-4-5",
-    "vibeCodeBench": 11.39
-  },
-  {
     "model": "Gemini 3.5 Flash",
     "developer": "Google AI",
     "releaseDate": "2026-05-19",
