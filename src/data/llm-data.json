@@ -6,10 +6,10 @@
     "modelUrl": "https://openai.com/index/introducing-gpt-5-5/",
     "hasVision": true,
     "AAIndex": 55,
-    "costAAIndex": 2865,
+    "costAAIndex": 2588,
     "tokenUseAAIndex": 72,
     "bullshitBench": 47,
-    "outputSpeed": 65.3,
+    "outputSpeed": 56,
     "ARCAGI2": 85,
     "simpleBench": 69,
     "VendingBench": 7523.84,
@@ -22,22 +22,13 @@
     "modelUrl": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
     "inputPriceCacheHit": 0.075,
     "hasVision": true,
-    "outputSpeed": 204.1,
+    "AAIndex": 40,
+    "costAAIndex": 1158,
+    "tokenUseAAIndex": 216,
+    "outputSpeed": 172,
     "ARCAGI2": 18.9,
     "bullshitBench": 31.0,
     "vibeCodeBench": 47.97
-  },
-  {
-    "model": "GPT 5.4 nano",
-    "developer": "OpenAI",
-    "releaseDate": "2026-03-17",
-    "modelUrl": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
-    "inputPriceCacheHit": 0.02,
-    "hasVision": true,
-    "outputSpeed": 192.5,
-    "ARCAGI2": 5.7,
-    "bullshitBench": 10.0,
-    "vibeCodeBench": 26.1
   },
   {
     "model": "GPT OSS 120B",
@@ -45,8 +36,10 @@
     "developer": "OpenAI",
     "parametersB": 120,
     "releaseDate": "2025-08-05",
-    "outputSpeed": 3000,
-    "outputSpeedSource": "Cerebras",
+    "AAIndex": 24,
+    "costAAIndex": 96,
+    "tokenUseAAIndex": 87,
+    "outputSpeed": 333,
     "bullshitBench": 5.0,
     "VendingBench": -21.53,
     "simpleBench": 22.1
@@ -77,8 +70,8 @@
     "costAAIndex": 4012,
     "tokenUseAAIndex": 117,
     "hasReasoning": true,
-    "outputSpeed": 62.1,
-    "VendingBench": 5787.43,
+    "outputSpeed": 60,
+    "VendingBench": 2992.34,
     "simpleBench": 64.8,
     "ARCAGI2": 72.1,
     "bullshitBench": 95,
@@ -98,13 +91,16 @@
     "bullshitBench": 91.0,
     "ARCAGI2": 58.3,
     "VendingBench": 7204.14,
-    "vibeCodeBench": 51.48
+    "vibeCodeBench": 55.77
   },
   {
     "model": "Claude Haiku 4.5",
     "developer": "Anthropic",
     "releaseDate": "2025-10-15",
-    "outputSpeed": 105,
+    "AAIndex": 30,
+    "costAAIndex": 539,
+    "tokenUseAAIndex": 88,
+    "outputSpeed": 107,
     "hasVision": true,
     "ARCAGI2": 4,
     "bullshitBench": 77.0,
@@ -117,7 +113,7 @@
     "developer": "Google AI",
     "releaseDate": "2026-05-19",
     "modelUrl": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
-    "outputSpeed": 153,
+    "outputSpeed": 152,
     "simpleBench": 76.7,
     "ARCAGI2": 72.1,
     "AAIndex": 50,
@@ -137,31 +133,12 @@
     "ARCAGI2": 77.1,
     "bullshitBench": 31.0,
     "hasVision": true,
-    "outputSpeed": 118,
+    "AAIndex": 46,
+    "costAAIndex": 860,
+    "tokenUseAAIndex": 56,
+    "outputSpeed": 122,
     "VendingBench": 911.21,
     "vibeCodeBench": 32.03
-  },
-  {
-    "model": "Gemini 3.1 Flash Lite",
-    "developer": "Google AI",
-    "releaseDate": "2026-03-04",
-    "modelUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/",
-    "outputSpeed": 300,
-    "bullshitBench": 11.0,
-    "hasVision": true,
-    "vibeCodeBench": 0.0
-  },
-  {
-    "model": "Gemini 3 Flash",
-    "developer": "Google AI",
-    "releaseDate": "2025-12-17",
-    "modelUrl": "https://blog.google/products/gemini/gemini-3-flash/",
-    "outputSpeed": 153,
-    "bullshitBench": 10.0,
-    "simpleBench": 61.1,
-    "VendingBench": 3634.72,
-    "ARCAGI2": 33.6,
-    "vibeCodeBench": 20.2
   },
   {
     "model": "Gemma 4 31B",
@@ -169,7 +146,9 @@
     "parametersB": 31,
     "releaseDate": "2026-04-02",
     "hasVision": true,
-    "outputSpeed": 35.8,
+    "AAIndex": 29,
+    "tokenUseAAIndex": 38,
+    "outputSpeed": 34,
     "bullshitBench": 25
   },
   {
@@ -178,21 +157,12 @@
     "releaseDate": "2026-04-17",
     "modelUrl": "https://grok.com/release-notes/apr-17-2026",
     "hasVision": true,
-    "outputSpeed": 196.1,
+    "AAIndex": 38,
+    "costAAIndex": 319,
+    "tokenUseAAIndex": 83,
+    "outputSpeed": 157,
     "VendingBench": 35.26,
     "vibeCodeBench": 19.4
-  },
-  {
-    "model": "Grok 4.1 Fast",
-    "modelUrl": "https://x.ai/news/grok-4-1-fast",
-    "developer": "xAI",
-    "releaseDate": "2025-11-19",
-    "simpleBench": 56,
-    "bullshitBench": 19.0,
-    "VendingBench": 1106.63,
-    "outputSpeed": 124,
-    "ARCAGI2": 5.3,
-    "vibeCodeBench": 1.2
   },
   {
     "model": "Muse Spark",
@@ -200,6 +170,8 @@
     "releaseDate": "2026-04-08",
     "modelUrl": "https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/",
     "hasVision": true,
+    "AAIndex": 43,
+    "tokenUseAAIndex": 57,
     "vibeCodeBench": 19.67
   },
   {
@@ -209,18 +181,13 @@
     "releaseDate": "2026-06-04",
     "modelUrl": "https://research.nvidia.com/labs/nemotron/Nemotron-3-Ultra/",
     "hasReasoning": true,
-    "outputSpeed": 172.4,
+    "AAIndex": 38,
+    "costAAIndex": 444,
+    "tokenUseAAIndex": 108,
+    "outputSpeed": 156,
     "simpleBench": 41.7,
-    "bullshitBench": 49.0
-  },
-  {
-    "model": "Nemotron 3 Super",
-    "developer": "Nvidia",
-    "parametersB": 120.6,
-    "releaseDate": "2026-03-11",
-    "modelUrl": "https://developer.nvidia.com/blog/introducing-nemotron-3-super-an-open-hybrid-mamba-transformer-moe-for-agentic-reasoning/",
-    "bullshitBench": 54.0,
-    "outputSpeed": 423.9
+    "bullshitBench": 49.0,
+    "vibeCodeBench": 7.64
   },
   {
     "model": "Mistral Medium 3.5",
@@ -229,19 +196,11 @@
     "releaseDate": "2026-04-29",
     "modelUrl": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5",
     "hasVision": true,
-    "outputSpeed": 143.2,
+    "AAIndex": 30,
+    "costAAIndex": 1014,
+    "tokenUseAAIndex": 91,
+    "outputSpeed": 73,
     "vibeCodeBench": 2.89
-  },
-  {
-    "model": "Mistral Small 4",
-    "developer": "Mistral",
-    "parametersB": 119,
-    "releaseDate": "2026-03-16",
-    "modelUrl": "https://mistral.ai/news/mistral-small-4",
-    "hasVision": true,
-    "outputSpeed": 142.3,
-    "bullshitBench": 6,
-    "vibeCodeBench": 0.0
   },
   {
     "model": "Kimi K2.6",
@@ -249,7 +208,10 @@
     "parametersB": 1000,
     "releaseDate": "2026-04-21",
     "modelUrl": "https://www.kimi.com/blog/kimi-k2-6",
-    "outputSpeed": 106.3,
+    "AAIndex": 43,
+    "costAAIndex": 839,
+    "tokenUseAAIndex": 163,
+    "outputSpeed": 44,
     "VendingBench": 6204.57,
     "bullshitBench": 65,
     "hasVision": true,
@@ -261,10 +223,11 @@
     "releaseDate": "2026-06-16",
     "modelUrl": "https://z.ai/blog/glm-5.2",
     "AAIndex": 51,
-    "outputSpeed": 112,
-    "costAAIndex": 868,
+    "outputSpeed": 101,
+    "costAAIndex": 920,
     "tokenUseAAIndex": 141,
     "hasVision": true,
+    "simpleBench": 58.8,
     "vibeCodeBench": 63.96
   },
   {
@@ -275,29 +238,13 @@
     "parametersEstimated": true,
     "releaseDate": "2026-05-20",
     "hasVision": true,
-    "outputSpeed": 210.2,
+    "AAIndex": 46,
+    "costAAIndex": 1159,
+    "tokenUseAAIndex": 103,
+    "outputSpeed": 93,
     "simpleBench": 70.4,
     "vibeCodeBench": 47.67,
     "bullshitBench": 71
-  },
-  {
-    "model": "Qwen 3.6 Plus",
-    "developer": "Qwen",
-    "modelUrl": "https://qwen.ai/blog?id=qwen3.6",
-    "releaseDate": "2026-04-01",
-    "hasVision": true,
-    "outputSpeed": 50.4,
-    "VendingBench": 5114.87,
-    "vibeCodeBench": 25.57
-  },
-  {
-    "model": " Step 3.7 Flash",
-    "developer": "StepFun",
-    "modelUrl": "https://static.stepfun.com/blog/step-3.7-flash/",
-    "releaseDate": "2026-05-29",
-    "parametersB": 198,
-    "outputSpeed": 412.1,
-    "hasVision": true
   },
   {
     "model": "MiniMax M3",
@@ -307,18 +254,12 @@
     "vibeCodeBench": 47.57,
     "hasVision": true,
     "hasReasoning": true,
+    "AAIndex": 44,
+    "costAAIndex": 235,
+    "tokenUseAAIndex": 89,
     "bullshitBench": 63,
-    "outputSpeed": 41.3
-  },
-  {
-    "model": "MiniMax M2.7",
-    "developer": "MiniMax",
-    "parametersB": 230,
-    "parametersEstimated": true,
-    "releaseDate": "2026-03-18",
-    "modelUrl": "https://www.minimax.io/news/minimax-m27-en",
-    "outputSpeed": 48.6,
-    "vibeCodeBench": 11.93
+    "outputSpeed": 63,
+    "VendingBench": 2157.77
   },
   {
     "model": "DeepSeek V4 Pro",
@@ -326,7 +267,10 @@
     "parametersB": 1600,
     "releaseDate": "2026-04-24",
     "modelUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
-    "outputSpeed": 35.8,
+    "AAIndex": 44,
+    "costAAIndex": 180,
+    "tokenUseAAIndex": 185,
+    "outputSpeed": 69,
     "simpleBench": 50.9,
     "VendingBench": 3284.52,
     "vibeCodeBench": 49.93
@@ -337,7 +281,10 @@
     "parametersB": 284,
     "releaseDate": "2026-04-24",
     "modelUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
-    "outputSpeed": 83.8,
+    "AAIndex": 40,
+    "costAAIndex": 78,
+    "tokenUseAAIndex": 234,
+    "outputSpeed": 103,
     "simpleBench": 46.3,
     "hasVision": true
   },
@@ -347,17 +294,12 @@
     "parametersB": 1020,
     "releaseDate": "2026-04-27",
     "modelUrl": "https://mimo.xiaomi.com/mimo-v2-5-pro",
-    "outputSpeed": 60.8,
+    "AAIndex": 42,
+    "costAAIndex": 99,
+    "tokenUseAAIndex": 96,
+    "outputSpeed": 39,
     "bullshitBench": 62,
-    "hasVision": true
-  },
-  {
-    "model": "MiMo V2 Flash",
-    "developer": "Xiaomi",
-    "parametersB": 309,
-    "releaseDate": "2025-12-16",
-    "modelUrl": "https://mimo.xiaomi.com/blog/mimo-v2-flash",
-    "outputSpeed": 129.9,
-    "bullshitBench": 13
+    "hasVision": true,
+    "vibeCodeBench": 34.11
   }
 ]
