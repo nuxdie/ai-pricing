@@ -25,18 +25,20 @@ const DEFAULT_COLUMN_ORDER = [
     "model",
     "parametersB",
     "AAIndex",
+    "worthAAIndex",
     "hourlyCostAAIndex",
+    "aaIndexTime",
     "costAAIndex",
     "tokenUseAAIndex",
     "outputSpeed",
     ...BENCHMARK_COLUMN_IDS,
     "hasVision",
 ];
-const GROUP_START_COLUMN_IDS = new Set(["AAIndex", "hourlyCostAAIndex", "hasVision"]);
+const GROUP_START_COLUMN_IDS = new Set(["AAIndex", "worthAAIndex", "hasVision"]);
 const COLUMN_GROUPS = [
     { label: "Model", columnIds: ["model", "parametersB"] },
     { label: "Quality", columnIds: ["AAIndex"] },
-    { label: "Cost", columnIds: ["hourlyCostAAIndex", ...COST_INPUT_COLUMN_IDS] },
+    { label: "Cost", columnIds: ["worthAAIndex", "hourlyCostAAIndex", "aaIndexTime", ...COST_INPUT_COLUMN_IDS] },
     { label: "Benchmarks", columnIds: [...BENCHMARK_COLUMN_IDS] },
     { label: "Caps", columnIds: ["hasVision"] },
 ];
@@ -248,7 +250,7 @@ export function DataTable({ data }: DataTableProps) {
                                         <button
                                             type="button"
                                             className="rounded px-1 py-px text-[9px] font-medium normal-case tracking-normal text-slate-300 hover:bg-slate-600 hover:text-white dark:hover:bg-slate-800"
-                                            title={showCostInputs ? "Hide Cost, Hunger, and Time columns" : "Show Cost, Hunger, and Time columns"}
+                                            title={showCostInputs ? "Hide Cost, Hunger, and Speed columns" : "Show Cost, Hunger, and Speed columns"}
                                             onClick={handleToggleCostInputs}
                                         >
                                             {showCostInputs ? "hide" : "inputs"}

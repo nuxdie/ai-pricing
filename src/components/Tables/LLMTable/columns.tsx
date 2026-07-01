@@ -17,6 +17,8 @@ const MODEL_SORT_LABELS: Record<string, string> = {
   country: "by country",
 };
 
+const WORTH_AAINDEX_BASELINE = 40;
+
 // Color palette — semantic meaning
 const COLORS = {
   quality: "rgba(99, 102, 241, 0.24)",     // indigo — intelligence/quality
@@ -111,6 +113,36 @@ const getAAIndexHourlyCostRange = (data: LLMModel[]) => {
   };
 };
 
+const getAAIndexWorth = (model: LLMModel): number | null => {
+  const seconds = getAAIndexSequentialTimeSeconds(model);
+
+  if (
+    typeof model.AAIndex !== "number" ||
+    typeof model.costAAIndex !== "number" ||
+    model.costAAIndex <= 0 ||
+    seconds === null ||
+    seconds <= 0
+  ) {
+    return null;
+  }
+
+  const capabilityPremium = Math.max(0, model.AAIndex - WORTH_AAINDEX_BASELINE);
+  return capabilityPremium ** 3 / (model.costAAIndex * (seconds / 86_400));
+};
+
+const getMaxAAIndexWorth = (data: LLMModel[]): number => {
+  const values = data
+    .map(getAAIndexWorth)
+    .filter((value): value is number => value !== null);
+
+  return Math.max(0, ...values);
+};
+
+const formatWorthScore = (value: number): string => {
+  if (value >= 10) return `${Math.round(value)}`;
+  return value.toFixed(1).replace(/\.0$/, "");
+};
+
 const formatHourlyCost = (value: number): string => {
   if (value === 0) return "Free";
   if (value < 1) return `$${value.toFixed(2)}/h`;
@@ -143,9 +175,11 @@ export const columns = (
   const simpleBenchRange = getColumnMinMax(data, "simpleBench");
   const ARCAGI2Range = getColumnMinMax(data, "ARCAGI2");
   const costRange = getColumnMinMax(data, "costAAIndex");
+  const maxAAIndexWorth = getMaxAAIndexWorth(data);
   const hourlyCostRange = getAAIndexHourlyCostRange(data);
   const tokenUseAAIndexRange = getColumnMinMax(data, "tokenUseAAIndex");
   const aaIndexSequentialTimeRange = getAAIndexSequentialTimeRange(data);
+  const outputSpeedRange = getColumnMinMax(data, "outputSpeed");
   const aaIndexRange = getColumnMinMax(data, "AAIndex");
   const bullshitBenchRange = getColumnMinMax(data, "bullshitBench");
   const vibeCodeBenchRange = getColumnMinMax(data, "vibeCodeBench");
@@ -359,11 +393,55 @@ export const columns = (
       maxSize: 100,
     },
 
+    // ─── Cost: Worth ───
+    {
+      id: "worthAAIndex",
+      accessorFn: (model) => {
+        const worth = getAAIndexWorth(model);
+        return worth !== null && maxAAIndexWorth > 0 ? (worth / maxAAIndexWorth) * 100 : null;
+      },
+      meta: { groupStart: true },
+      header: ({ column }) => (
+        <ColumnHeader
+          column={column}
+          title="Worth"
+          subtitle="idx"
+          tooltip="Normalized frontier value: capability above 40 AAIndex, cubed, divided by total AAIndex cost × sequential AAIndex time in days. Best model is 100. Higher is better."
+          filter={{ type: "range", enabled: true, showMax: false }}
+          sort={{ enabled: true }}
+        />
+      ),
+      cell: ({ row }) => {
+        const worth = getAAIndexWorth(row.original);
+        const score = worth !== null && maxAAIndexWorth > 0 ? (worth / maxAAIndexWorth) * 100 : null;
+        const seconds = getAAIndexSequentialTimeSeconds(row.original);
+        const title = score !== null && seconds !== null && row.original.AAIndex !== null && row.original.AAIndex !== undefined && row.original.costAAIndex !== undefined
+          ? `Worth: ${formatWorthScore(score)} (${row.original.AAIndex}% AAIndex, $${Math.round(row.original.costAAIndex)}, ${formatAAIndexSequentialTime(seconds)})`
+          : undefined;
+
+        return (
+          <div title={title}>
+            <BarCell
+              value={score}
+              min={0}
+              max={100}
+              color={COLORS.profit}
+              format={formatWorthScore}
+            />
+          </div>
+        );
+      },
+      sortingFn: "alphanumeric",
+      sortDescFirst: true,
+      sortUndefined: "last",
+      filterFn: createPriceRangeFilter,
+      maxSize: 85,
+    },
+
     // ─── Cost: Hourly AAIndex cost ───
     {
       id: "hourlyCostAAIndex",
       accessorFn: getAAIndexHourlyCost,
-      meta: { groupStart: true },
       header: ({ column }) => (
         <ColumnHeader
           column={column}
@@ -399,6 +477,61 @@ export const columns = (
       sortUndefined: "last",
       filterFn: createPriceRangeFilter,
       maxSize: 100,
+    },
+
+    // ─── Cost: AAIndex sequential time ───
+    {
+      id: "aaIndexTime",
+      accessorFn: getAAIndexSequentialTimeSeconds,
+      header: ({ column }) => (
+        <ColumnHeader
+          column={column}
+          title="Time"
+          subtitle="AAIndex"
+          tooltip="Estimated sequential generation time to output all AAIndex tokens: Hunger (MTok) × 1,000,000 ÷ output speed (tokens/s). Lower is better. Values marked with * use a provider-specific speed source."
+          link={{
+            url: "https://artificialanalysis.ai/leaderboards/models",
+            title: "Artificial Analysis Model Leaderboard",
+          }}
+          filter={{ type: "range", enabled: true, showMin: false }}
+          sort={{ enabled: true }}
+        />
+      ),
+      cell: ({ row }) => {
+        const value = getAAIndexSequentialTimeSeconds(row.original);
+        const titleParts: string[] = [];
+
+        if (value !== null && row.original.tokenUseAAIndex !== undefined && row.original.outputSpeed !== null && row.original.outputSpeed !== undefined) {
+          titleParts.push(
+            `AAIndex sequential time: ${formatAAIndexSequentialTime(value)} (${row.original.tokenUseAAIndex}M tokens at ${row.original.outputSpeed} t/s)`,
+          );
+        }
+
+        if (row.original.outputSpeedSource) {
+          titleParts.push(`Speed source: ${row.original.outputSpeedSource}`);
+        }
+
+        return (
+          <div title={titleParts.length ? titleParts.join("\n") : undefined}>
+            <BarCell
+              value={value}
+              min={aaIndexSequentialTimeRange.min}
+              max={aaIndexSequentialTimeRange.max}
+              color={COLORS.speed}
+              useLog
+              format={(v) => {
+                const formatted = formatAAIndexSequentialTime(v);
+                return row.original.outputSpeedSource ? `${formatted}*` : formatted;
+              }}
+            />
+          </div>
+        );
+      },
+      sortingFn: "alphanumeric",
+      sortDescFirst: false,
+      sortUndefined: "last",
+      filterFn: createPriceRangeFilter,
+      maxSize: 95,
     },
 
     // ─── Cost: AA Index cost ───
@@ -462,57 +595,40 @@ export const columns = (
       maxSize: 100,
     },
 
-    // ─── Performance: AAIndex sequential time ───
+    // ─── Cost: Output speed ───
     {
-      id: "outputSpeed",
-      accessorFn: getAAIndexSequentialTimeSeconds,
-      meta: { groupStart: true },
+      accessorKey: "outputSpeed",
       header: ({ column }) => (
         <ColumnHeader
           column={column}
-          title="Time"
-          subtitle="AAIndex"
-          tooltip="Estimated sequential generation time to output all AAIndex tokens: Hunger (MTok) × 1,000,000 ÷ output speed (tokens/s). Lower is better. Values marked with * use a provider-specific speed source."
+          title="Speed"
+          subtitle="t/s"
+          tooltip="Output speed in tokens per second while the model is generating after the first token (higher is better). Values marked with * come from a provider-specific source."
           link={{
             url: "https://artificialanalysis.ai/leaderboards/models",
             title: "Artificial Analysis Model Leaderboard",
           }}
-          filter={{ type: "range", enabled: true, showMin: false }}
+          filter={{ type: "range", enabled: true, showMax: false }}
           sort={{ enabled: true }}
         />
       ),
-      cell: ({ row }) => {
-        const value = getAAIndexSequentialTimeSeconds(row.original);
-        const titleParts: string[] = [];
-
-        if (value !== null && row.original.tokenUseAAIndex !== undefined && row.original.outputSpeed !== null && row.original.outputSpeed !== undefined) {
-          titleParts.push(
-            `AAIndex sequential time: ${formatAAIndexSequentialTime(value)} (${row.original.tokenUseAAIndex}M tokens at ${row.original.outputSpeed} t/s)`,
-          );
-        }
-
-        if (row.original.outputSpeedSource) {
-          titleParts.push(`Speed source: ${row.original.outputSpeedSource}`);
-        }
-
-        return (
-          <div title={titleParts.length ? titleParts.join("\n") : undefined}>
+      cell: ({ row }) => (
+        <div title={row.original.outputSpeedSource ? `Speed source: ${row.original.outputSpeedSource}` : undefined}>
             <BarCell
-              value={value}
-              min={aaIndexSequentialTimeRange.min}
-              max={aaIndexSequentialTimeRange.max}
+              value={row.original.outputSpeed}
+              min={outputSpeedRange.min}
+              max={outputSpeedRange.max}
               color={COLORS.speed}
               useLog
               format={(v) => {
-                const formatted = formatAAIndexSequentialTime(v);
-                return row.original.outputSpeedSource ? `${formatted}*` : formatted;
+                const rounded = `${Math.round(v)}`;
+                return row.original.outputSpeedSource ? `${rounded}*` : rounded;
               }}
             />
-          </div>
-        );
-      },
+        </div>
+      ),
       sortingFn: "alphanumeric",
-      sortDescFirst: false,
+      sortDescFirst: true,
       sortUndefined: "last",
       filterFn: createPriceRangeFilter,
       maxSize: 95,
