@@ -90,22 +90,6 @@
     "tokenUseAAIndex": 304
   },
   {
-    "model": "Claude Sonnet 4.6",
-    "developer": "Anthropic",
-    "releaseDate": "2026-02-17",
-    "modelUrl": "https://www.anthropic.com/news/claude-sonnet-4-6",
-    "maxOutputTokens": 128,
-    "hasVision": true,
-    "AAIndex": 47,
-    "outputSpeed": 55,
-    "costAAIndex": 3356,
-    "tokenUseAAIndex": 197,
-    "bullshitBench": 91.0,
-    "ARCAGI2": 58.3,
-    "VendingBench": 7204.14,
-    "vibeCodeBench": 55.77
-  },
-  {
     "model": "Gemini 3.5 Flash",
     "developer": "Google AI",
     "releaseDate": "2026-05-19",
@@ -224,6 +208,8 @@
     "costAAIndex": 933,
     "tokenUseAAIndex": 141,
     "simpleBench": 58.8,
+    "bullshitBench": 31,
+    "VendingBench": 8313.78,
     "vibeCodeBench": 63.96
   },
   {
