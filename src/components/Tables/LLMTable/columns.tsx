@@ -88,6 +88,36 @@ const getAAIndexSequentialTimeRange = (data: LLMModel[]) => {
   };
 };
 
+const getAAIndexHourlyCost = (model: LLMModel): number | null => {
+  const seconds = getAAIndexSequentialTimeSeconds(model);
+
+  if (seconds === null || seconds <= 0 || typeof model.costAAIndex !== "number") {
+    return null;
+  }
+
+  return model.costAAIndex / (seconds / 3600);
+};
+
+const getAAIndexHourlyCostRange = (data: LLMModel[]) => {
+  const values = data
+    .map(getAAIndexHourlyCost)
+    .filter((value): value is number => value !== null);
+
+  if (values.length === 0) return { min: 0, max: 0 };
+
+  return {
+    min: Math.min(...values),
+    max: Math.max(...values),
+  };
+};
+
+const formatHourlyCost = (value: number): string => {
+  if (value === 0) return "Free";
+  if (value < 1) return `$${value.toFixed(2)}/h`;
+  if (value < 10) return `$${value.toFixed(1)}/h`;
+  return `$${Math.round(value)}/h`;
+};
+
 const formatCompactDurationValue = (value: number): string => {
   const rounded = value >= 10 ? value.toFixed(1) : value.toFixed(2);
   return rounded.replace(/\.0+$/, "").replace(/(\.\d*[1-9])0+$/, "$1");
@@ -105,16 +135,6 @@ const formatAAIndexSequentialTime = (seconds: number): string => {
   return `${formatCompactDurationValue(hours / 24)}d`;
 };
 
-// Column group definitions — used by DataTable for group headers
-export const columnGroups = [
-  { label: "Model", span: 2 },
-  { label: "Quality", span: 1 },
-  { label: "Cost", span: 2 },
-  { label: "Performance", span: 1 },
-  { label: "Benchmarks", span: 5 },
-  { label: "Caps", span: 1 },
-];
-
 export const columns = (
   data: LLMModel[],
   modelSortMode: ModelSortMode = null,
@@ -123,6 +143,7 @@ export const columns = (
   const simpleBenchRange = getColumnMinMax(data, "simpleBench");
   const ARCAGI2Range = getColumnMinMax(data, "ARCAGI2");
   const costRange = getColumnMinMax(data, "costAAIndex");
+  const hourlyCostRange = getAAIndexHourlyCostRange(data);
   const tokenUseAAIndexRange = getColumnMinMax(data, "tokenUseAAIndex");
   const aaIndexSequentialTimeRange = getAAIndexSequentialTimeRange(data);
   const aaIndexRange = getColumnMinMax(data, "AAIndex");
@@ -338,10 +359,51 @@ export const columns = (
       maxSize: 100,
     },
 
+    // ─── Cost: Hourly AAIndex cost ───
+    {
+      id: "hourlyCostAAIndex",
+      accessorFn: getAAIndexHourlyCost,
+      meta: { groupStart: true },
+      header: ({ column }) => (
+        <ColumnHeader
+          column={column}
+          title="Wage"
+          subtitle="USD/h"
+          tooltip="Effective hourly cost if the model were an employee solving AAIndex sequentially: total AAIndex cost ÷ AAIndex generation time in hours. Lower is better."
+          filter={{ type: "range", enabled: true, showMin: false }}
+          sort={{ enabled: true }}
+        />
+      ),
+      cell: ({ row }) => {
+        const value = getAAIndexHourlyCost(row.original);
+        const seconds = getAAIndexSequentialTimeSeconds(row.original);
+        const title = value !== null && seconds !== null && row.original.costAAIndex !== undefined
+          ? `Effective wage: ${formatHourlyCost(value)} ($${Math.round(row.original.costAAIndex)} over ${formatAAIndexSequentialTime(seconds)})`
+          : undefined;
+
+        return (
+          <div title={title}>
+            <BarCell
+              value={value}
+              min={hourlyCostRange.min}
+              max={hourlyCostRange.max}
+              color={COLORS.cost}
+              useLog
+              format={formatHourlyCost}
+            />
+          </div>
+        );
+      },
+      sortingFn: "alphanumeric",
+      sortDescFirst: false,
+      sortUndefined: "last",
+      filterFn: createPriceRangeFilter,
+      maxSize: 100,
+    },
+
     // ─── Cost: AA Index cost ───
     {
       accessorKey: "costAAIndex",
-      meta: { groupStart: true },
       header: ({ column }) => (
         <ColumnHeader
           column={column}

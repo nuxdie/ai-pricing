@@ -9,7 +9,7 @@ import {
     useReactTable,
 } from "@tanstack/react-table";
 import { useCallback, useMemo, useState } from "react";
-import { columns as createColumns, columnGroups, ModelSortMode, MODEL_SORT_CYCLE } from "./columns";
+import { columns as createColumns, ModelSortMode, MODEL_SORT_CYCLE } from "./columns";
 import { BENCHMARK_COLUMN_IDS } from "./columnIds";
 import { LLMModel } from "@/types/llm";
 
@@ -18,18 +18,28 @@ interface DataTableProps {
 }
 
 const BENCHMARK_COLUMN_ID_SET = new Set<string>(BENCHMARK_COLUMN_IDS);
+const COST_INPUT_COLUMN_IDS = ["costAAIndex", "tokenUseAAIndex", "outputSpeed"] as const;
+const COST_INPUT_COLUMN_ID_SET = new Set<string>(COST_INPUT_COLUMN_IDS);
 const COLUMN_ORDER_STORAGE_KEY = "llm-table-benchmark-column-order";
 const DEFAULT_COLUMN_ORDER = [
     "model",
     "parametersB",
     "AAIndex",
+    "hourlyCostAAIndex",
     "costAAIndex",
     "tokenUseAAIndex",
     "outputSpeed",
     ...BENCHMARK_COLUMN_IDS,
     "hasVision",
 ];
-const GROUP_START_COLUMN_IDS = new Set(["AAIndex", "costAAIndex", "outputSpeed", "hasVision"]);
+const GROUP_START_COLUMN_IDS = new Set(["AAIndex", "hourlyCostAAIndex", "hasVision"]);
+const COLUMN_GROUPS = [
+    { label: "Model", columnIds: ["model", "parametersB"] },
+    { label: "Quality", columnIds: ["AAIndex"] },
+    { label: "Cost", columnIds: ["hourlyCostAAIndex", ...COST_INPUT_COLUMN_IDS] },
+    { label: "Benchmarks", columnIds: [...BENCHMARK_COLUMN_IDS] },
+    { label: "Caps", columnIds: ["hasVision"] },
+];
 
 const getStoredBenchmarkOrder = (): string[] => {
     if (typeof window === "undefined") return [...BENCHMARK_COLUMN_IDS];
@@ -97,9 +107,16 @@ export function DataTable({ data }: DataTableProps) {
     const [sorting, setSorting] = useState<SortingState>([]);
     const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
     const [modelSortMode, setModelSortMode] = useState<ModelSortMode>(null);
+    const [showCostInputs, setShowCostInputs] = useState(false);
     const [draggedColumnId, setDraggedColumnId] = useState<string | null>(null);
     const [dragOverColumnId, setDragOverColumnId] = useState<string | null>(null);
     const [columnOrder, setColumnOrder] = useState<ColumnOrderState>(() => createColumnOrder(getStoredBenchmarkOrder()));
+
+    const columnVisibility = useMemo<Record<string, boolean>>(() => ({
+        costAAIndex: showCostInputs,
+        tokenUseAAIndex: showCostInputs,
+        outputSpeed: showCostInputs,
+    }), [showCostInputs]);
 
     const cycleModelSort = useCallback(() => {
         setModelSortMode((prev) => {
@@ -129,6 +146,15 @@ export function DataTable({ data }: DataTableProps) {
         [],
     );
 
+    const handleToggleCostInputs = useCallback(() => {
+        if (showCostInputs) {
+            setColumnFilters((filters) => filters.filter((filter) => !COST_INPUT_COLUMN_ID_SET.has(filter.id)));
+            setSorting((sorts) => sorts.filter((sort) => !COST_INPUT_COLUMN_ID_SET.has(sort.id)));
+        }
+
+        setShowCostInputs((value) => !value);
+    }, [showCostInputs]);
+
     const tableColumns = useMemo(
         () => createColumns(data, modelSortMode, cycleModelSort),
         [data, modelSortMode, cycleModelSort],
@@ -147,8 +173,11 @@ export function DataTable({ data }: DataTableProps) {
             sorting,
             columnFilters,
             columnOrder,
+            columnVisibility,
         },
     });
+
+    const visibleColumnIdSet = new Set(table.getVisibleLeafColumns().map((column) => column.id));
 
     const handleBenchmarkDragStart = useCallback((e: React.DragEvent<HTMLTableCellElement>, columnId: string) => {
         if (isInteractiveElement(e.target)) {
@@ -201,17 +230,36 @@ export function DataTable({ data }: DataTableProps) {
             <thead className="sticky top-0 z-10">
                 {/* Column group header */}
                 <tr className="bg-slate-700 text-slate-200 dark:bg-slate-900 dark:text-slate-300">
-                    {columnGroups.map((group, i) => (
-                        <th
-                            key={group.label}
-                            colSpan={group.span}
-                            className={`px-2 py-[3px] text-[10px] font-medium uppercase tracking-widest text-left ${
-                                i > 0 ? "border-l border-slate-500/50" : ""
-                            }`}
-                        >
-                            {group.label}
-                        </th>
-                    ))}
+                    {COLUMN_GROUPS.map((group, i) => {
+                        const visibleSpan = group.columnIds.filter((columnId) => visibleColumnIdSet.has(columnId)).length;
+                        if (visibleSpan === 0) return null;
+
+                        return (
+                            <th
+                                key={group.label}
+                                colSpan={visibleSpan}
+                                className={`px-2 py-[3px] text-[10px] font-medium uppercase tracking-widest text-left ${
+                                    i > 0 ? "border-l border-slate-500/50" : ""
+                                }`}
+                            >
+                                {group.label === "Cost" ? (
+                                    <div className="flex items-center justify-between gap-1">
+                                        <span>Cost</span>
+                                        <button
+                                            type="button"
+                                            className="rounded px-1 py-px text-[9px] font-medium normal-case tracking-normal text-slate-300 hover:bg-slate-600 hover:text-white dark:hover:bg-slate-800"
+                                            title={showCostInputs ? "Hide Cost, Hunger, and Time columns" : "Show Cost, Hunger, and Time columns"}
+                                            onClick={handleToggleCostInputs}
+                                        >
+                                            {showCostInputs ? "hide" : "inputs"}
+                                        </button>
+                                    </div>
+                                ) : (
+                                    group.label
+                                )}
+                            </th>
+                        );
+                    })}
                 </tr>
 
                 {/* Column headers */}

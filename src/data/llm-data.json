@@ -223,7 +223,6 @@
     "outputSpeed": 101,
     "costAAIndex": 933,
     "tokenUseAAIndex": 141,
-    "hasVision": true,
     "simpleBench": 58.8,
     "vibeCodeBench": 63.96
   },
