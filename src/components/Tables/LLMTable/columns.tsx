@@ -67,6 +67,44 @@ const agePillClasses = (days: number): string => {
   return "bg-slate-500/8 text-slate-400 dark:text-slate-500";
 };
 
+const getAAIndexSequentialTimeSeconds = (model: LLMModel): number | null => {
+  if (typeof model.tokenUseAAIndex !== "number" || typeof model.outputSpeed !== "number" || model.outputSpeed <= 0) {
+    return null;
+  }
+
+  return (model.tokenUseAAIndex * 1_000_000) / model.outputSpeed;
+};
+
+const getAAIndexSequentialTimeRange = (data: LLMModel[]) => {
+  const values = data
+    .map(getAAIndexSequentialTimeSeconds)
+    .filter((value): value is number => value !== null);
+
+  if (values.length === 0) return { min: 0, max: 0 };
+
+  return {
+    min: Math.min(...values),
+    max: Math.max(...values),
+  };
+};
+
+const formatCompactDurationValue = (value: number): string => {
+  const rounded = value >= 10 ? value.toFixed(1) : value.toFixed(2);
+  return rounded.replace(/\.0+$/, "").replace(/(\.\d*[1-9])0+$/, "$1");
+};
+
+const formatAAIndexSequentialTime = (seconds: number): string => {
+  if (seconds < 60) return `${Math.round(seconds)}s`;
+
+  const minutes = seconds / 60;
+  if (minutes < 60) return `${Math.round(minutes)}m`;
+
+  const hours = minutes / 60;
+  if (hours < 24) return `${formatCompactDurationValue(hours)}h`;
+
+  return `${formatCompactDurationValue(hours / 24)}d`;
+};
+
 // Column group definitions — used by DataTable for group headers
 export const columnGroups = [
   { label: "Model", span: 2 },
@@ -86,7 +124,7 @@ export const columns = (
   const ARCAGI2Range = getColumnMinMax(data, "ARCAGI2");
   const costRange = getColumnMinMax(data, "costAAIndex");
   const tokenUseAAIndexRange = getColumnMinMax(data, "tokenUseAAIndex");
-  const outputSpeedRange = getColumnMinMax(data, "outputSpeed");
+  const aaIndexSequentialTimeRange = getAAIndexSequentialTimeRange(data);
   const aaIndexRange = getColumnMinMax(data, "AAIndex");
   const bullshitBenchRange = getColumnMinMax(data, "bullshitBench");
   const vibeCodeBenchRange = getColumnMinMax(data, "vibeCodeBench");
@@ -362,41 +400,57 @@ export const columns = (
       maxSize: 100,
     },
 
-    // ─── Performance: Output Speed ───
+    // ─── Performance: AAIndex sequential time ───
     {
-      accessorKey: "outputSpeed",
+      id: "outputSpeed",
+      accessorFn: getAAIndexSequentialTimeSeconds,
       meta: { groupStart: true },
       header: ({ column }) => (
         <ColumnHeader
           column={column}
-          title="Speed"
-          subtitle="t/s"
-          tooltip="Output speed in tokens per second while the model is generating after the first token (higher is better). Values marked with * come from a provider-specific source."
+          title="Time"
+          subtitle="AAIndex"
+          tooltip="Estimated sequential generation time to output all AAIndex tokens: Hunger (MTok) × 1,000,000 ÷ output speed (tokens/s). Lower is better. Values marked with * use a provider-specific speed source."
           link={{
             url: "https://artificialanalysis.ai/leaderboards/models",
             title: "Artificial Analysis Model Leaderboard",
           }}
-          filter={{ type: "range", enabled: true, showMax: false }}
+          filter={{ type: "range", enabled: true, showMin: false }}
           sort={{ enabled: true }}
         />
       ),
-      cell: ({ row }) => (
-        <div title={row.original.outputSpeedSource ? `Speed source: ${row.original.outputSpeedSource}` : undefined}>
-          <BarCell
-            value={row.original.outputSpeed}
-            min={outputSpeedRange.min}
-            max={outputSpeedRange.max}
-            color={COLORS.speed}
-            useLog
-            format={(v) => {
-              const rounded = `${Math.round(v)}`;
-              return row.original.outputSpeedSource ? `${rounded}*` : rounded;
-            }}
-          />
-        </div>
-      ),
+      cell: ({ row }) => {
+        const value = getAAIndexSequentialTimeSeconds(row.original);
+        const titleParts: string[] = [];
+
+        if (value !== null && row.original.tokenUseAAIndex !== undefined && row.original.outputSpeed !== null && row.original.outputSpeed !== undefined) {
+          titleParts.push(
+            `AAIndex sequential time: ${formatAAIndexSequentialTime(value)} (${row.original.tokenUseAAIndex}M tokens at ${row.original.outputSpeed} t/s)`,
+          );
+        }
+
+        if (row.original.outputSpeedSource) {
+          titleParts.push(`Speed source: ${row.original.outputSpeedSource}`);
+        }
+
+        return (
+          <div title={titleParts.length ? titleParts.join("\n") : undefined}>
+            <BarCell
+              value={value}
+              min={aaIndexSequentialTimeRange.min}
+              max={aaIndexSequentialTimeRange.max}
+              color={COLORS.speed}
+              useLog
+              format={(v) => {
+                const formatted = formatAAIndexSequentialTime(v);
+                return row.original.outputSpeedSource ? `${formatted}*` : formatted;
+              }}
+            />
+          </div>
+        );
+      },
       sortingFn: "alphanumeric",
-      sortDescFirst: true,
+      sortDescFirst: false,
       sortUndefined: "last",
       filterFn: createPriceRangeFilter,
       maxSize: 95,
