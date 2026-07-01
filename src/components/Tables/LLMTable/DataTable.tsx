@@ -253,7 +253,7 @@ export function DataTable({ data }: DataTableProps) {
                                             title={showCostInputs ? "Hide Cost, Hunger, and Speed columns" : "Show Cost, Hunger, and Speed columns"}
                                             onClick={handleToggleCostInputs}
                                         >
-                                            {showCostInputs ? "hide" : "inputs"}
+                                            {showCostInputs ? "hide" : "Show inputs"}
                                         </button>
                                     </div>
                                 ) : (
