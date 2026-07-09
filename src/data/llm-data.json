@@ -1,19 +1,45 @@
 [
   {
-    "model": "GPT 5.5",
+    "model": "GPT 5.6 Sol",
     "developer": "OpenAI",
-    "releaseDate": "2026-04-23",
-    "modelUrl": "https://openai.com/index/introducing-gpt-5-5/",
+    "releaseDate": "2026-06-26",
+    "modelUrl": "https://openai.com/index/previewing-gpt-5-6-sol/",
+    "hasVision": true,
+    "AAIndex": 59,
+    "costAAIndex": 2824,
+    "tokenUseAAIndex": 70,
+    "outputSpeed": 46,
+    "VendingBench": 9619,
+    "vibeCodeBench": 80,
+    "ARCAGI2": 92.5
+  },
+  {
+    "model": "GPT 5.6 Terra",
+    "developer": "OpenAI",
+    "releaseDate": "2026-07-09",
+    "modelUrl": "https://openai.com/index/gpt-5-6/",
     "hasVision": true,
     "AAIndex": 55,
-    "costAAIndex": 2819,
-    "tokenUseAAIndex": 72,
-    "bullshitBench": 47,
-    "outputSpeed": 56,
-    "ARCAGI2": 85,
-    "simpleBench": 69,
-    "VendingBench": 7523.84,
-    "vibeCodeBench": 69.85
+    "costAAIndex": 1754,
+    "tokenUseAAIndex": 96,
+    "outputSpeed": 164,
+    "VendingBench": 7343,
+    "vibeCodeBench": 67,
+    "ARCAGI2": 83.9
+  },
+  {
+    "model": "GPT 5.6 Luna",
+    "developer": "OpenAI",
+    "releaseDate": "2026-07-09",
+    "modelUrl": "https://openai.com/index/gpt-5-6/",
+    "hasVision": true,
+    "AAIndex": 51,
+    "costAAIndex": 870,
+    "tokenUseAAIndex": 130,
+    "outputSpeed": 210,
+    "VendingBench": 4094,
+    "vibeCodeBench": 77,
+    "ARCAGI2": 59.5
   },
   {
     "model": "GPT 5.4 mini",
@@ -133,17 +159,18 @@
     "bullshitBench": 25
   },
   {
-    "model": "Grok 4.3",
+    "model": "Grok 4.5",
     "developer": "xAI",
-    "releaseDate": "2026-04-17",
-    "modelUrl": "https://grok.com/release-notes/apr-17-2026",
+    "releaseDate": "2026-07-08",
+    "modelUrl": "https://cursor.com/blog/grok-4-5",
     "hasVision": true,
-    "AAIndex": 38,
-    "costAAIndex": 300,
-    "tokenUseAAIndex": 83,
-    "outputSpeed": 157,
-    "VendingBench": 35.26,
-    "vibeCodeBench": 19.4
+    "AAIndex": 54,
+    "costAAIndex": 601,
+    "tokenUseAAIndex": 60,
+    "outputSpeed": 91,
+    "VendingBench": 3887,
+    "vibeCodeBench": 69,
+    "simpleBench": 70
   },
   {
     "model": "Muse Spark",
@@ -210,7 +237,8 @@
     "simpleBench": 58.8,
     "bullshitBench": 31,
     "VendingBench": 8313.78,
-    "vibeCodeBench": 63.96
+    "vibeCodeBench": 63.96,
+    "ARCAGI2": 22.8
   },
   {
     "model": "Qwen 3.7 Max",
