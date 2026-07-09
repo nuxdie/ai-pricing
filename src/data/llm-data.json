@@ -170,6 +170,8 @@
     "outputSpeed": 91,
     "VendingBench": 3887,
     "vibeCodeBench": 69,
+    "parametersB": 1500,
+    "parametersEstimated": true,
     "simpleBench": 70
   },
   {
