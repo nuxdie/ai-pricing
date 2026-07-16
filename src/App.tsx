@@ -63,7 +63,7 @@ export default function App() {
               </svg>
             )}
           </button>
-          <span>Updated July 1, 2026</span>
+          <span>Updated July 17, 2026</span>
           <a
             href="https://github.com/nuxdie/ai-pricing"
             target="_blank"

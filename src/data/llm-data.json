@@ -213,6 +213,19 @@
     "vibeCodeBench": 2.89
   },
   {
+    "model": "Kimi K3",
+    "developer": "Moonshot AI",
+    "modelUrl": "https://www.kimi.com/blog/kimi-k3",
+    "parametersB": 2800,
+    "releaseDate": "2026-07-14",
+    "hasVision": true,
+    "AAIndex": 57,
+    "outputSpeed": 62,
+    "tokenUseAAIndex": 130,
+    "costAAIndex": 2691,
+    "bullshitBench": 73
+  },
+  {
     "model": "Kimi K2.6",
     "developer": "Moonshot AI",
     "parametersB": 1000,
