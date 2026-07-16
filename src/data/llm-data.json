@@ -226,21 +226,6 @@
     "bullshitBench": 73
   },
   {
-    "model": "Kimi K2.6",
-    "developer": "Moonshot AI",
-    "parametersB": 1000,
-    "releaseDate": "2026-04-21",
-    "modelUrl": "https://www.kimi.com/blog/kimi-k2-6",
-    "AAIndex": 43,
-    "costAAIndex": 831,
-    "tokenUseAAIndex": 163,
-    "outputSpeed": 44,
-    "VendingBench": 6204.57,
-    "bullshitBench": 65,
-    "hasVision": true,
-    "vibeCodeBench": 37.89
-  },
-  {
     "model": "GLM 5.2",
     "developer": "Z AI",
     "releaseDate": "2026-06-16",
