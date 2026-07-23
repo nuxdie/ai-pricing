@@ -393,18 +393,17 @@ export const columns = (
       maxSize: 100,
     },
 
-    // ─── Cost: Worth ───
+    // ─── Quality: Worth ───
     {
       id: "worthAAIndex",
       accessorFn: (model) => {
         const worth = getAAIndexWorth(model);
         return worth !== null && maxAAIndexWorth > 0 ? (worth / maxAAIndexWorth) * 100 : null;
       },
-      meta: { groupStart: true },
       header: ({ column }) => (
         <ColumnHeader
           column={column}
-          title="Value for money"
+          title="Worth"
           tooltip="Normalized frontier value: capability above 40 AAIndex, cubed, divided by total AAIndex cost × sequential AAIndex time in days. Best model is 100. Higher is better."
           filter={{ type: "range", enabled: true, showMax: false }}
           sort={{ enabled: true }}
@@ -441,6 +440,7 @@ export const columns = (
     {
       id: "hourlyCostAAIndex",
       accessorFn: getAAIndexHourlyCost,
+      meta: { groupStart: true },
       header: ({ column }) => (
         <ColumnHeader
           column={column}

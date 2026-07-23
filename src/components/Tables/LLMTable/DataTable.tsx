@@ -34,11 +34,11 @@ const DEFAULT_COLUMN_ORDER = [
     ...BENCHMARK_COLUMN_IDS,
     "hasVision",
 ];
-const GROUP_START_COLUMN_IDS = new Set(["AAIndex", "worthAAIndex", "hasVision"]);
+const GROUP_START_COLUMN_IDS = new Set(["AAIndex", "hourlyCostAAIndex", "hasVision"]);
 const COLUMN_GROUPS = [
     { label: "Model", columnIds: ["model", "parametersB"] },
-    { label: "Quality", columnIds: ["AAIndex"] },
-    { label: "Cost", columnIds: ["worthAAIndex", "hourlyCostAAIndex", "aaIndexTime", ...COST_INPUT_COLUMN_IDS] },
+    { label: "Quality", columnIds: ["AAIndex", "worthAAIndex"] },
+    { label: "Cost", columnIds: ["hourlyCostAAIndex", "aaIndexTime", ...COST_INPUT_COLUMN_IDS] },
     { label: "Benchmarks", columnIds: [...BENCHMARK_COLUMN_IDS] },
     { label: "Caps", columnIds: ["hasVision"] },
 ];
