@@ -42,21 +42,6 @@
     "ARCAGI2": 59.5
   },
   {
-    "model": "GPT 5.4 mini",
-    "developer": "OpenAI",
-    "releaseDate": "2026-03-17",
-    "modelUrl": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
-    "inputPriceCacheHit": 0.075,
-    "hasVision": true,
-    "AAIndex": 40,
-    "costAAIndex": 1127,
-    "tokenUseAAIndex": 216,
-    "outputSpeed": 172,
-    "ARCAGI2": 18.9,
-    "bullshitBench": 31.0,
-    "vibeCodeBench": 47.97
-  },
-  {
     "model": "GPT OSS 120B",
     "modelUrl": "https://openai.com/index/introducing-gpt-oss/",
     "developer": "OpenAI",
@@ -116,36 +101,16 @@
     "tokenUseAAIndex": 304
   },
   {
-    "model": "Gemini 3.5 Flash",
+    "model": "Gemini 3.6 Flash",
     "developer": "Google AI",
-    "releaseDate": "2026-05-19",
-    "modelUrl": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
-    "outputSpeed": 152,
-    "simpleBench": 76.7,
-    "ARCAGI2": 72.1,
+    "releaseDate": "2026-07-21",
+    "modelUrl": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+    "outputSpeed": 251,
     "AAIndex": 50,
-    "costAAIndex": 1041,
-    "tokenUseAAIndex": 75,
-    "bullshitBench": 20,
-    "vibeCodeBench": 48.68,
-    "VendingBench": 5396.42,
+    "costAAIndex": 727,
+    "vibeCodeBench": 57.32,
+    "tokenUseAAIndex": 59,
     "hasVision": true
-  },
-  {
-    "model": "Gemini 3.1 Pro",
-    "developer": "Google AI",
-    "releaseDate": "2026-02-19",
-    "modelUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
-    "simpleBench": 79.6,
-    "ARCAGI2": 77.1,
-    "bullshitBench": 31.0,
-    "hasVision": true,
-    "AAIndex": 46,
-    "costAAIndex": 815,
-    "tokenUseAAIndex": 56,
-    "outputSpeed": 122,
-    "VendingBench": 911.21,
-    "vibeCodeBench": 32.03
   },
   {
     "model": "Gemma 4 31B",
@@ -175,14 +140,15 @@
     "simpleBench": 70
   },
   {
-    "model": "Muse Spark",
+    "model": "Muse Spark 1.1",
     "developer": "Meta",
-    "releaseDate": "2026-04-08",
-    "modelUrl": "https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/",
+    "releaseDate": "2026-07-09",
+    "modelUrl": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
     "hasVision": true,
-    "AAIndex": 43,
-    "tokenUseAAIndex": 57,
-    "vibeCodeBench": 19.67
+    "AAIndex": 51,
+    "outputSpeed": 124.9,
+    "tokenUseAAIndex": 94,
+    "costAAIndex": 548
   },
   {
     "model": "Nemotron 3 Ultra",
@@ -221,6 +187,7 @@
     "hasVision": true,
     "AAIndex": 57,
     "outputSpeed": 62,
+    "simpleBench": 60.7,
     "tokenUseAAIndex": 130,
     "costAAIndex": 2691,
     "bullshitBench": 73
