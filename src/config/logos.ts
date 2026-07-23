@@ -17,6 +17,7 @@ import alibabaLogo from '@/assets/alibaba.png';
 import zaiLogo from '@/assets/zai.svg';
 import stepFunLogo from '@/assets/stepfun.svg';
 import xiaomiLogo from '@/assets/xiaomi.svg';
+import thinkingMachinesLogo from '@/assets/thinking_machines.svg';
 
 // Create a mapping of provider names to their logos
 export const providerLogos: Record<string, string> = {
@@ -53,6 +54,7 @@ export const developerLogos: Record<string, string> = {
     'Z AI': zaiLogo,
     'StepFun': stepFunLogo,
     'Xiaomi': xiaomiLogo,
+    'Thinking Machines': thinkingMachinesLogo,
 };
 
 // Country flag emojis by developer
@@ -72,4 +74,5 @@ export const developerFlags: Record<string, string> = {
     'StepFun': '🇨🇳',
     'Cohere': '🇨🇦',
     'Xiaomi': '🇨🇳',
+    'Thinking Machines': '🇺🇸',
 };

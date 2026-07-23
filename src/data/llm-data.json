@@ -151,6 +151,19 @@
     "costAAIndex": 548
   },
   {
+    "model": "Inkling",
+    "developer": "Thinking Machines",
+    "modelUrl": "https://thinkingmachines.ai/news/introducing-inkling/",
+    "releaseDate": "2026-07-15",
+    "parametersB": 975,
+    "AAIndex": 41,
+    "outputSpeed": 57.1,
+    "tokenUseAAIndex": 130,
+    "hasVision": true,
+    "vibeCodeBench": 19,
+    "simpleBench": 50
+  },
+  {
     "model": "Nemotron 3 Ultra",
     "developer": "Nvidia",
     "parametersB": 550,
