@@ -404,8 +404,7 @@ export const columns = (
       header: ({ column }) => (
         <ColumnHeader
           column={column}
-          title="Worth"
-          subtitle="idx"
+          title="Value for money"
           tooltip="Normalized frontier value: capability above 40 AAIndex, cubed, divided by total AAIndex cost × sequential AAIndex time in days. Best model is 100. Higher is better."
           filter={{ type: "range", enabled: true, showMax: false }}
           sort={{ enabled: true }}
