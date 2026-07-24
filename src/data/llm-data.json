@@ -72,21 +72,18 @@
     "bullshitBench": 89.0
   },
   {
-    "model": "Claude Opus 4.8",
+    "model": "Claude Opus 5",
     "developer": "Anthropic",
-    "releaseDate": "2026-05-28",
-    "modelUrl": "https://www.anthropic.com/news/claude-opus-4-8",
+    "releaseDate": "2026-07-24",
+    "modelUrl": "https://www.anthropic.com/news/claude-opus-5",
     "hasVision": true,
-    "AAIndex": 56,
-    "costAAIndex": 3753,
-    "tokenUseAAIndex": 117,
-    "hasReasoning": true,
-    "outputSpeed": 60,
-    "VendingBench": 2992.34,
-    "simpleBench": 64.8,
-    "ARCAGI2": 72.1,
-    "bullshitBench": 95,
-    "vibeCodeBench": 82.72
+    "AAIndex": 61,
+    "outputSpeed": 56,
+    "tokenUseAAIndex": 100,
+    "costAAIndex": 3836,
+    "vibeCodeBench": 88.4,
+    "simpleBench": 80.6,
+    "ARCAGI2": 90.4
   },
   {
     "model": "Claude Sonnet 5",
