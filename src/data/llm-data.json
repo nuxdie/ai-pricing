@@ -69,7 +69,8 @@
     "outputSpeed": 66,
     "VendingBench": 4966.64,
     "vibeCodeBench": 90.35,
-    "bullshitBench": 89.0
+    "bullshitBench": 89.0,
+    "ARCAGI2": 89.2
   },
   {
     "model": "Claude Opus 5",
@@ -110,7 +111,8 @@
     "costAAIndex": 727,
     "vibeCodeBench": 64,
     "tokenUseAAIndex": 59,
-    "hasVision": true
+    "hasVision": true,
+    "ARCAGI2": 60.4
   },
   {
     "model": "Gemma 4 31B",
@@ -137,6 +139,7 @@
     "outputSpeed": 65.8,
     "VendingBench": 9047.03,
     "vibeCodeBench": 76.24,
+    "ARCAGI2": 67.1,
     "context": 500000,
     "inputPrice": 2,
     "inputPriceCacheHit": 0.5,
@@ -166,7 +169,8 @@
     "tokenUseAAIndex": 130,
     "hasVision": true,
     "vibeCodeBench": 19.21,
-    "simpleBench": 50
+    "simpleBench": 50,
+    "ARCAGI2": 36.5
   },
   {
     "model": "Nemotron 3 Ultra",
@@ -210,7 +214,8 @@
     "costAAIndex": 2691,
     "VendingBench": 5165.04,
     "vibeCodeBench": 84.96,
-    "bullshitBench": 73
+    "bullshitBench": 73,
+    "ARCAGI2": 60.4
   },
   {
     "model": "GLM 5.2",
@@ -284,6 +289,7 @@
     "outputSpeed": 103,
     "simpleBench": 46.3,
     "vibeCodeBench": 74.74,
+    "ARCAGI2": 61.4,
     "hasVision": true
   },
   {
