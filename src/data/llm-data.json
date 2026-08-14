@@ -12,6 +12,7 @@
     "VendingBench": 9619.37,
     "vibeCodeBench": 80.5,
     "simpleBench": 64.8,
+    "bullshitBench": 46,
     "ARCAGI2": 92.5
   },
   {
@@ -27,6 +28,7 @@
     "VendingBench": 7343.21,
     "vibeCodeBench": 67.84,
     "simpleBench": 48.9,
+    "bullshitBench": 53,
     "ARCAGI2": 83.9
   },
   {
@@ -42,6 +44,7 @@
     "VendingBench": 4094.71,
     "vibeCodeBench": 77.06,
     "simpleBench": 46.8,
+    "bullshitBench": 40,
     "ARCAGI2": 59.5
   },
   {
@@ -72,7 +75,7 @@
     "outputSpeed": 66,
     "VendingBench": 4966.64,
     "vibeCodeBench": 90.35,
-    "bullshitBench": 89.0,
+    "bullshitBench": 54,
     "ARCAGI2": 89.2
   },
   {
@@ -88,6 +91,7 @@
     "VendingBench": 11181.87,
     "vibeCodeBench": 88.4,
     "simpleBench": 80.6,
+    "bullshitBench": 70,
     "ARCAGI2": 90.4
   },
   {
@@ -103,7 +107,8 @@
     "tokenUseAAIndex": 304,
     "VendingBench": 6377.7,
     "vibeCodeBench": 81.33,
-    "simpleBench": 60.6
+    "simpleBench": 60.6,
+    "bullshitBench": 78
   },
   {
     "model": "Gemini 3.6 Flash",
@@ -116,6 +121,7 @@
     "vibeCodeBench": 64,
     "tokenUseAAIndex": 59,
     "hasVision": true,
+    "bullshitBench": 28,
     "ARCAGI2": 60.4
   },
   {
@@ -189,7 +195,7 @@
     "tokenUseAAIndex": 108,
     "outputSpeed": 156,
     "simpleBench": 41.7,
-    "bullshitBench": 49.0,
+    "bullshitBench": 40,
     "vibeCodeBench": 7.64
   },
   {
@@ -251,7 +257,7 @@
     "outputSpeed": 93,
     "simpleBench": 70.4,
     "vibeCodeBench": 47.67,
-    "bullshitBench": 71
+    "bullshitBench": 56
   },
   {
     "model": "MiniMax M3",
@@ -281,7 +287,8 @@
     "outputSpeed": 69,
     "simpleBench": 50.9,
     "VendingBench": 3284.52,
-    "vibeCodeBench": 82.3
+    "vibeCodeBench": 82.3,
+    "bullshitBench": 14
   },
   {
     "model": "DeepSeek V4 Flash",
@@ -295,6 +302,7 @@
     "outputSpeed": 103,
     "simpleBench": 61.1,
     "vibeCodeBench": 74.74,
+    "bullshitBench": 38,
     "ARCAGI2": 61.4,
     "hasVision": true
   },
