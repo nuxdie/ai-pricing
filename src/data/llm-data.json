@@ -9,7 +9,7 @@
     "costAAIndex": 2824,
     "tokenUseAAIndex": 70,
     "outputSpeed": 46,
-    "VendingBench": 9619,
+    "VendingBench": 9619.37,
     "vibeCodeBench": 80,
     "ARCAGI2": 92.5
   },
@@ -23,7 +23,7 @@
     "costAAIndex": 1754,
     "tokenUseAAIndex": 96,
     "outputSpeed": 164,
-    "VendingBench": 7343,
+    "VendingBench": 7343.21,
     "vibeCodeBench": 67,
     "ARCAGI2": 83.9
   },
@@ -37,7 +37,7 @@
     "costAAIndex": 870,
     "tokenUseAAIndex": 130,
     "outputSpeed": 210,
-    "VendingBench": 4094,
+    "VendingBench": 4094.71,
     "vibeCodeBench": 77,
     "ARCAGI2": 59.5
   },
@@ -81,6 +81,7 @@
     "outputSpeed": 56,
     "tokenUseAAIndex": 100,
     "costAAIndex": 3836,
+    "VendingBench": 11181.87,
     "vibeCodeBench": 88.4,
     "simpleBench": 80.6,
     "ARCAGI2": 90.4
@@ -95,7 +96,8 @@
     "AAIndex": 53,
     "outputSpeed": 78.9,
     "costAAIndex": 6015,
-    "tokenUseAAIndex": 304
+    "tokenUseAAIndex": 304,
+    "VendingBench": 6377.7
   },
   {
     "model": "Gemini 3.6 Flash",
@@ -132,6 +134,7 @@
     "costAAIndex": 1068.47,
     "tokenUseAAIndex": 72,
     "outputSpeed": 65.8,
+    "VendingBench": 9047.03,
     "context": 500000,
     "inputPrice": 2,
     "inputPriceCacheHit": 0.5,
@@ -146,7 +149,8 @@
     "AAIndex": 51,
     "outputSpeed": 124.9,
     "tokenUseAAIndex": 94,
-    "costAAIndex": 548
+    "costAAIndex": 548,
+    "VendingBench": 6520.47
   },
   {
     "model": "Inkling",
@@ -201,6 +205,7 @@
     "simpleBench": 60.7,
     "tokenUseAAIndex": 130,
     "costAAIndex": 2691,
+    "VendingBench": 5165.04,
     "bullshitBench": 73
   },
   {
