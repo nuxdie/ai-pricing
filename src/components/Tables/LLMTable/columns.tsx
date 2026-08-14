@@ -172,6 +172,7 @@ export const columns = (
   modelSortMode: ModelSortMode = null,
   onCycleModelSort?: () => void,
 ): ColumnDef<LLMModel>[] => {
+  const valsIndexRange = getColumnMinMax(data, "valsIndex");
   const simpleBenchRange = getColumnMinMax(data, "simpleBench");
   const ARCAGI2Range = getColumnMinMax(data, "ARCAGI2");
   const costRange = getColumnMinMax(data, "costAAIndex");
@@ -633,10 +634,41 @@ export const columns = (
       maxSize: 95,
     },
 
+    // ─── Benchmarks: Vals Index ───
+    {
+      accessorKey: "valsIndex",
+      meta: { groupStart: true },
+      header: ({ column }) => (
+        <ColumnHeader
+          column={column}
+          title="Vals Index"
+          subtitle="GDP-weighted · %"
+          tooltip="Agentic performance across finance, coding, and legal tasks, weighted by each sector's share of U.S. GDP (higher is better)"
+          link={{
+            url: "https://www.vals.ai/benchmarks/vals_index",
+            title: "Vals Index",
+          }}
+          sort={{ enabled: true }}
+          draggable
+        />
+      ),
+      cell: ({ row }) => (
+        <BarCell
+          value={row.original.valsIndex}
+          min={valsIndexRange.min}
+          max={valsIndexRange.max}
+          color={COLORS.benchmark}
+          format={(v) => v.toFixed(1)}
+        />
+      ),
+      sortingFn: "alphanumeric",
+      sortDescFirst: true,
+      sortUndefined: "last",
+    },
+
     // ─── Benchmarks: SimpleBench ───
     {
       accessorKey: "simpleBench",
-      meta: { groupStart: true },
       header: ({ column }) => (
         <ColumnHeader
           column={column}

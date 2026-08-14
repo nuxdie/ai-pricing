@@ -2,6 +2,7 @@ export interface LLMModel {
     model: string;
     provider?: string;
     simpleBench?: number | null; // Simple Bench
+    valsIndex?: number | null; // Vals Index GDP-weighted benchmark, %
     fictionLiveBench?: number | null; // Fiction.LiveBench @ 60k tokens
     aiderBench?: number | null;  // Aider SWE
     AAIndex?: number | null; // Artificial Analysis Index

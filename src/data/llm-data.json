@@ -10,6 +10,7 @@
     "tokenUseAAIndex": 70,
     "outputSpeed": 62,
     "VendingBench": 9619.37,
+    "valsIndex": 63.71,
     "vibeCodeBench": 80.5,
     "simpleBench": 64.8,
     "bullshitBench": 46,
@@ -26,6 +27,7 @@
     "tokenUseAAIndex": 96,
     "outputSpeed": 115,
     "VendingBench": 7343.21,
+    "valsIndex": 56.53,
     "vibeCodeBench": 67.84,
     "simpleBench": 48.9,
     "bullshitBench": 53,
@@ -42,6 +44,7 @@
     "tokenUseAAIndex": 130,
     "outputSpeed": 152,
     "VendingBench": 4094.71,
+    "valsIndex": 59.88,
     "vibeCodeBench": 77.06,
     "simpleBench": 46.8,
     "bullshitBench": 40,
@@ -74,6 +77,7 @@
     "simpleBench": 81.9,
     "outputSpeed": 63,
     "VendingBench": 4966.64,
+    "valsIndex": 66.04,
     "vibeCodeBench": 90.35,
     "bullshitBench": 54,
     "ARCAGI2": 89.2
@@ -89,6 +93,7 @@
     "tokenUseAAIndex": 100,
     "costAAIndex": 3836,
     "VendingBench": 11181.87,
+    "valsIndex": 67.21,
     "vibeCodeBench": 88.4,
     "simpleBench": 80.6,
     "bullshitBench": 70,
@@ -106,6 +111,7 @@
     "costAAIndex": 6015,
     "tokenUseAAIndex": 304,
     "VendingBench": 6377.7,
+    "valsIndex": 59.61,
     "vibeCodeBench": 81.33,
     "simpleBench": 60.6,
     "bullshitBench": 78
@@ -123,6 +129,7 @@
     "costAAIndex": 484.73,
     "tokenUseAAIndex": 64,
     "outputSpeed": 340.1,
+    "valsIndex": 59.44,
     "vibeCodeBench": 70.39,
     "context": 1048576,
     "maxOutputTokens": 65536,
@@ -154,6 +161,7 @@
     "tokenUseAAIndex": 72,
     "outputSpeed": 65.8,
     "VendingBench": 9047.03,
+    "valsIndex": 59.17,
     "vibeCodeBench": 76.24,
     "simpleBench": 75.9,
     "ARCAGI2": 67.1,
@@ -173,6 +181,7 @@
     "tokenUseAAIndex": 94,
     "costAAIndex": 548,
     "VendingBench": 6520.47,
+    "valsIndex": 54.75,
     "vibeCodeBench": 72.16
   },
   {
@@ -185,6 +194,7 @@
     "outputSpeed": 73,
     "tokenUseAAIndex": 130,
     "hasVision": true,
+    "valsIndex": 34.1,
     "vibeCodeBench": 19.21,
     "simpleBench": 50,
     "ARCAGI2": 36.5
@@ -200,6 +210,7 @@
     "costAAIndex": 443,
     "tokenUseAAIndex": 108,
     "outputSpeed": 146,
+    "valsIndex": 27.39,
     "simpleBench": 41.7,
     "bullshitBench": 40,
     "vibeCodeBench": 7.64
@@ -215,6 +226,7 @@
     "costAAIndex": 1014,
     "tokenUseAAIndex": 91,
     "outputSpeed": 69,
+    "valsIndex": 17.95,
     "vibeCodeBench": 2.89
   },
   {
@@ -230,6 +242,7 @@
     "tokenUseAAIndex": 130,
     "costAAIndex": 2691,
     "VendingBench": 5165.04,
+    "valsIndex": 57.81,
     "vibeCodeBench": 84.96,
     "bullshitBench": 73,
     "ARCAGI2": 60.4
@@ -246,6 +259,7 @@
     "simpleBench": 58.8,
     "bullshitBench": 31,
     "VendingBench": 8313.78,
+    "valsIndex": 53.12,
     "vibeCodeBench": 63.96,
     "ARCAGI2": 22.8
   },
@@ -261,6 +275,7 @@
     "costAAIndex": 1631,
     "tokenUseAAIndex": 103,
     "outputSpeed": 93,
+    "valsIndex": 44.77,
     "simpleBench": 70.4,
     "vibeCodeBench": 47.67,
     "bullshitBench": 56
@@ -279,6 +294,7 @@
     "bullshitBench": 63,
     "outputSpeed": 86,
     "VendingBench": 2157.77,
+    "valsIndex": 42.72,
     "simpleBench": 45.8
   },
   {
@@ -293,6 +309,7 @@
     "outputSpeed": 81,
     "simpleBench": 50.9,
     "VendingBench": 3284.52,
+    "valsIndex": 52.37,
     "vibeCodeBench": 82.3,
     "bullshitBench": 14
   },
@@ -306,6 +323,7 @@
     "costAAIndex": 78,
     "tokenUseAAIndex": 234,
     "outputSpeed": 121,
+    "valsIndex": 53.57,
     "simpleBench": 61.1,
     "vibeCodeBench": 74.74,
     "bullshitBench": 38,
