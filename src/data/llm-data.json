@@ -121,20 +121,21 @@
     "bullshitBench": 25
   },
   {
-    "model": "Grok 4.5",
+    "model": "Grok 4.6",
     "developer": "xAI",
-    "releaseDate": "2026-07-08",
-    "modelUrl": "https://cursor.com/blog/grok-4-5",
+    "provider": "xAI",
+    "modelUrl": "https://x.ai/news/grok-4-6",
+    "releaseDate": "2026-08-12",
     "hasVision": true,
-    "AAIndex": 54,
-    "costAAIndex": 601,
-    "tokenUseAAIndex": 60,
-    "outputSpeed": 91,
-    "VendingBench": 3887,
-    "vibeCodeBench": 69,
-    "parametersB": 1500,
-    "parametersEstimated": true,
-    "simpleBench": 70
+    "hasReasoning": true,
+    "AAIndex": 61,
+    "costAAIndex": 1068.47,
+    "tokenUseAAIndex": 72,
+    "outputSpeed": 65.8,
+    "context": 500000,
+    "inputPrice": 2,
+    "inputPriceCacheHit": 0.5,
+    "outputPrice": 6
   },
   {
     "model": "Muse Spark 1.1",
