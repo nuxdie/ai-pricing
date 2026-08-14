@@ -10,7 +10,7 @@
     "tokenUseAAIndex": 70,
     "outputSpeed": 46,
     "VendingBench": 9619.37,
-    "vibeCodeBench": 80,
+    "vibeCodeBench": 80.5,
     "ARCAGI2": 92.5
   },
   {
@@ -24,7 +24,7 @@
     "tokenUseAAIndex": 96,
     "outputSpeed": 164,
     "VendingBench": 7343.21,
-    "vibeCodeBench": 67,
+    "vibeCodeBench": 67.84,
     "ARCAGI2": 83.9
   },
   {
@@ -38,7 +38,7 @@
     "tokenUseAAIndex": 130,
     "outputSpeed": 210,
     "VendingBench": 4094.71,
-    "vibeCodeBench": 77,
+    "vibeCodeBench": 77.06,
     "ARCAGI2": 59.5
   },
   {
@@ -97,7 +97,8 @@
     "outputSpeed": 78.9,
     "costAAIndex": 6015,
     "tokenUseAAIndex": 304,
-    "VendingBench": 6377.7
+    "VendingBench": 6377.7,
+    "vibeCodeBench": 81.33
   },
   {
     "model": "Gemini 3.6 Flash",
@@ -107,7 +108,7 @@
     "outputSpeed": 251,
     "AAIndex": 50,
     "costAAIndex": 727,
-    "vibeCodeBench": 57.32,
+    "vibeCodeBench": 64,
     "tokenUseAAIndex": 59,
     "hasVision": true
   },
@@ -135,6 +136,7 @@
     "tokenUseAAIndex": 72,
     "outputSpeed": 65.8,
     "VendingBench": 9047.03,
+    "vibeCodeBench": 76.24,
     "context": 500000,
     "inputPrice": 2,
     "inputPriceCacheHit": 0.5,
@@ -150,7 +152,8 @@
     "outputSpeed": 124.9,
     "tokenUseAAIndex": 94,
     "costAAIndex": 548,
-    "VendingBench": 6520.47
+    "VendingBench": 6520.47,
+    "vibeCodeBench": 72.16
   },
   {
     "model": "Inkling",
@@ -162,7 +165,7 @@
     "outputSpeed": 57.1,
     "tokenUseAAIndex": 130,
     "hasVision": true,
-    "vibeCodeBench": 19,
+    "vibeCodeBench": 19.21,
     "simpleBench": 50
   },
   {
@@ -206,6 +209,7 @@
     "tokenUseAAIndex": 130,
     "costAAIndex": 2691,
     "VendingBench": 5165.04,
+    "vibeCodeBench": 84.96,
     "bullshitBench": 73
   },
   {
@@ -266,7 +270,7 @@
     "outputSpeed": 69,
     "simpleBench": 50.9,
     "VendingBench": 3284.52,
-    "vibeCodeBench": 49.93
+    "vibeCodeBench": 82.3
   },
   {
     "model": "DeepSeek V4 Flash",
@@ -279,6 +283,7 @@
     "tokenUseAAIndex": 234,
     "outputSpeed": 103,
     "simpleBench": 46.3,
+    "vibeCodeBench": 74.74,
     "hasVision": true
   },
   {
