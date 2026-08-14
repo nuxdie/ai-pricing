@@ -156,6 +156,7 @@
     "releaseDate": "2026-08-12",
     "hasVision": true,
     "hasReasoning": true,
+    "parametersB": 1500,
     "AAIndex": 61,
     "costAAIndex": 1068.47,
     "tokenUseAAIndex": 72,
