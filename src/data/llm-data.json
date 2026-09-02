@@ -277,6 +277,7 @@
     "costAAIndex": 1238.5,
     "tokenUseAAIndex": 170,
     "outputSpeed": 62.8,
+    "VendingBench": 8163.61,
     "context": 1000000,
     "inputPrice": 1.4,
     "inputPriceCacheHit": 0.27,
