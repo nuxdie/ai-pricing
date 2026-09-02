@@ -269,7 +269,8 @@
     "developer": "Z AI",
     "provider": "Z AI",
     "parametersB": 753,
-    "releaseDate": "2026-08-18",
+    "modelUrl": "https://z.ai/blog/glm-5.3",
+    "releaseDate": "2026-08-14",
     "hasVision": false,
     "hasReasoning": true,
     "AAIndex": 60,
@@ -280,22 +281,6 @@
     "inputPrice": 1.4,
     "inputPriceCacheHit": 0.27,
     "outputPrice": 4.4
-  },
-  {
-    "model": "GLM 5.2",
-    "developer": "Z AI",
-    "releaseDate": "2026-06-16",
-    "modelUrl": "https://z.ai/blog/glm-5.2",
-    "AAIndex": 53,
-    "outputSpeed": 108,
-    "costAAIndex": 933,
-    "tokenUseAAIndex": 141,
-    "simpleBench": 58.8,
-    "bullshitBench": 31,
-    "VendingBench": 8313.78,
-    "valsIndex": 53.12,
-    "vibeCodeBench": 63.96,
-    "ARCAGI2": 22.8
   },
   {
     "model": "Qwen 3.7 Max",
