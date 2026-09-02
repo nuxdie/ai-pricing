@@ -33,6 +33,7 @@ export const providerLogos: Record<string, string> = {
     'Mistral': mistralLogo,
     'Cohere': cohereLogo,
     'Alibaba': alibabaLogo,
+    'Z AI': zaiLogo,
     'StepFun': stepFunLogo,
     'Xiaomi': xiaomiLogo,
 };

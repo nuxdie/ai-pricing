@@ -65,6 +65,22 @@
     "simpleBench": 22.1
   },
   {
+    "model": "Claude Fable 5.1",
+    "developer": "Anthropic",
+    "provider": "Anthropic",
+    "releaseDate": "2026-09-01",
+    "hasVision": true,
+    "hasReasoning": true,
+    "AAIndex": 66,
+    "costAAIndex": 8523.16,
+    "tokenUseAAIndex": 140,
+    "outputSpeed": 66.4,
+    "context": 1000000,
+    "inputPrice": 10,
+    "inputPriceCacheHit": 0.2,
+    "outputPrice": 50
+  },
+  {
     "model": "Claude Fable 5",
     "developer": "Anthropic",
     "releaseDate": "2026-06-09",
@@ -247,6 +263,23 @@
     "vibeCodeBench": 84.96,
     "bullshitBench": 73,
     "ARCAGI2": 60.4
+  },
+  {
+    "model": "GLM 5.3",
+    "developer": "Z AI",
+    "provider": "Z AI",
+    "parametersB": 753,
+    "releaseDate": "2026-08-18",
+    "hasVision": false,
+    "hasReasoning": true,
+    "AAIndex": 60,
+    "costAAIndex": 1238.5,
+    "tokenUseAAIndex": 170,
+    "outputSpeed": 62.8,
+    "context": 1000000,
+    "inputPrice": 1.4,
+    "inputPriceCacheHit": 0.27,
+    "outputPrice": 4.4
   },
   {
     "model": "GLM 5.2",
