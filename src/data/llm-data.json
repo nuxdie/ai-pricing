@@ -282,6 +282,7 @@
     "VendingBench": 8163.61,
     "valsIndex": 56.97,
     "vibeCodeBench": 78.13,
+    "simpleBench": 66.2,
     "context": 1000000,
     "inputPrice": 1.4,
     "inputPriceCacheHit": 0.27,
