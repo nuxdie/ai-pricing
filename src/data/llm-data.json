@@ -213,21 +213,6 @@
     "vibeCodeBench": 72.16
   },
   {
-    "model": "Inkling",
-    "developer": "Thinking Machines",
-    "modelUrl": "https://thinkingmachines.ai/news/introducing-inkling/",
-    "releaseDate": "2026-07-15",
-    "parametersB": 975,
-    "AAIndex": 42,
-    "outputSpeed": 73,
-    "tokenUseAAIndex": 130,
-    "hasVision": true,
-    "valsIndex": 34.1,
-    "vibeCodeBench": 19.21,
-    "simpleBench": 50,
-    "ARCAGI2": 36.5
-  },
-  {
     "model": "Nemotron 3 Ultra",
     "developer": "Nvidia",
     "parametersB": 550,
