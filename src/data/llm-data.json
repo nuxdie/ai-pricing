@@ -135,6 +135,22 @@
     "bullshitBench": 78
   },
   {
+    "model": "Gemini 3.8 Flash",
+    "developer": "Google AI",
+    "provider": "Google AI",
+    "releaseDate": "2026-09-02",
+    "hasVision": true,
+    "hasReasoning": true,
+    "AAIndex": 59,
+    "costAAIndex": 825.83,
+    "tokenUseAAIndex": 120,
+    "outputSpeed": 348.3,
+    "context": 1000000,
+    "inputPrice": 0.75,
+    "inputPriceCacheHit": 0.075,
+    "outputPrice": 3.75
+  },
+  {
     "model": "Gemini 3.7 Flash",
     "developer": "Google AI",
     "provider": "Google AI",
@@ -190,6 +206,19 @@
     "inputPrice": 2,
     "inputPriceCacheHit": 0.5,
     "outputPrice": 6
+  },
+  {
+    "model": "Muse Spark 1.3",
+    "developer": "Meta",
+    "provider": "Meta",
+    "releaseDate": "2026-09-02",
+    "hasVision": true,
+    "hasReasoning": true,
+    "AAIndex": 62,
+    "tokenUseAAIndex": 120,
+    "context": 1000000,
+    "inputPrice": 0,
+    "outputPrice": 0
   },
   {
     "model": "Muse Spark 1.1",
@@ -290,6 +319,22 @@
     "inputPrice": 1.4,
     "inputPriceCacheHit": 0.27,
     "outputPrice": 4.4
+  },
+  {
+    "model": "Qwen 3.8 Max",
+    "developer": "Qwen",
+    "provider": "Alibaba",
+    "releaseDate": "2026-08-03",
+    "hasVision": true,
+    "hasReasoning": true,
+    "AAIndex": 58,
+    "costAAIndex": 1532.07,
+    "tokenUseAAIndex": 150,
+    "outputSpeed": 39.3,
+    "context": 1000000,
+    "inputPrice": 2,
+    "inputPriceCacheHit": 0.25,
+    "outputPrice": 6
   },
   {
     "model": "Qwen 3.7 Max",
