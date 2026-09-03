@@ -151,28 +151,6 @@
     "outputPrice": 3.75
   },
   {
-    "model": "Gemini 3.7 Flash",
-    "developer": "Google AI",
-    "provider": "Google AI",
-    "releaseDate": "2026-08-13",
-    "modelUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash",
-    "hasVision": true,
-    "hasReasoning": true,
-    "toolUse": true,
-    "AAIndex": 56,
-    "costAAIndex": 484.73,
-    "tokenUseAAIndex": 64,
-    "outputSpeed": 340.1,
-    "valsIndex": 59.31,
-    "vibeCodeBench": 70.39,
-    "bullshitBench": 31,
-    "context": 1048576,
-    "maxOutputTokens": 65536,
-    "inputPrice": 0.75,
-    "inputPriceCacheHit": 0.075,
-    "outputPrice": 3.75
-  },
-  {
     "model": "Gemma 4 31B",
     "developer": "Google AI",
     "parametersB": 31,
@@ -335,23 +313,6 @@
     "inputPrice": 2,
     "inputPriceCacheHit": 0.25,
     "outputPrice": 6
-  },
-  {
-    "model": "Qwen 3.7 Max",
-    "developer": "Qwen",
-    "modelUrl": "https://qwen.ai/blog?id=qwen3.7",
-    "parametersB": 235,
-    "parametersEstimated": true,
-    "releaseDate": "2026-05-20",
-    "hasVision": true,
-    "AAIndex": 46,
-    "costAAIndex": 1631,
-    "tokenUseAAIndex": 103,
-    "outputSpeed": 93,
-    "valsIndex": 44.77,
-    "simpleBench": 70.4,
-    "vibeCodeBench": 47.67,
-    "bullshitBench": 56
   },
   {
     "model": "MiniMax M3",
