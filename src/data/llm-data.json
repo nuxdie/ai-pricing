@@ -213,6 +213,22 @@
     "vibeCodeBench": 72.16
   },
   {
+    "model": "Muse Glimmer",
+    "developer": "Meta",
+    "parametersB": 30,
+    "releaseDate": "2026-08-10",
+    "hasVision": true,
+    "hasReasoning": true,
+    "AAIndex": 35,
+    "costAAIndex": 96.48,
+    "tokenUseAAIndex": 48,
+    "outputSpeed": 108.9,
+    "context": 131072,
+    "inputPrice": 0.325,
+    "inputPriceCacheHit": 0.04,
+    "outputPrice": 1.35
+  },
+  {
     "model": "Nemotron 3 Ultra",
     "developer": "Nvidia",
     "parametersB": 550,
@@ -298,6 +314,23 @@
     "inputPrice": 2,
     "inputPriceCacheHit": 0.25,
     "outputPrice": 6
+  },
+  {
+    "model": "Qwen 3.8 27B",
+    "developer": "Qwen",
+    "provider": "Alibaba",
+    "parametersB": 27,
+    "releaseDate": "2026-08-14",
+    "hasVision": true,
+    "hasReasoning": true,
+    "AAIndex": 52,
+    "costAAIndex": 693.67,
+    "tokenUseAAIndex": 160,
+    "outputSpeed": 37.5,
+    "context": 262144,
+    "inputPrice": 0.5,
+    "inputPriceCacheHit": 0.05,
+    "outputPrice": 3
   },
   {
     "model": "MiniMax M3",
