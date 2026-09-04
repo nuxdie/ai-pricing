@@ -794,8 +794,8 @@ export const columns = (
         <ColumnHeader
           column={column}
           title="Vending"
-          subtitle="Net USD"
-          tooltip="A benchmark for measuring AI model performance on running a business over a year; bank balance in the end (higher is better)"
+          subtitle="Balance · USD"
+          tooltip="Average ending bank balance after running a simulated vending machine business for one year across 5 runs (higher is better)"
           link={{
             url: "https://andonlabs.com/evals/vending-bench-2",
             title: "VendingBench 2",

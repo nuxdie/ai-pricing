@@ -11,7 +11,7 @@ export interface LLMModel {
     SWEBench?: number | null; // Software Engineering Bench Verified 500, %
     GPQAdiamond?: number | null; // Google-proof Q and A Diamond hard, %
     HumLastExam?: number | null; // Humanity's last exam, %
-    VendingBench?: number | null; // Vending Machine Bench, USD
+    VendingBench?: number | null; // Vending-Bench 2 average ending balance, USD
     ARCAGI2?: number | null; // ARC AGI 2 Benchmark, %
     snitchBench?: number | null; // SnitchBench Gov Snitch Rate, %
     bullshitBench?: number | null; // BullshitBench v2 nonsense detection rate, %
