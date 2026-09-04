@@ -11,6 +11,7 @@
     "tokenUseAAIndex": 42,
     "valsIndex": 66.61,
     "vibeCodeBench": 89.59,
+    "ARCAGI2": 95,
     "context": 1000000,
     "inputPrice": 10,
     "inputPriceCacheHit": 1,
@@ -96,6 +97,8 @@
     "VendingBench": 5421.56,
     "valsIndex": 68.83,
     "vibeCodeBench": 90.26,
+    "simpleBench": 86.6,
+    "ARCAGI2": 90,
     "context": 1000000,
     "inputPrice": 10,
     "inputPriceCacheHit": 0.2,
@@ -167,6 +170,7 @@
     "outputSpeed": 348.3,
     "valsIndex": 62.25,
     "vibeCodeBench": 78.65,
+    "simpleBench": 82.4,
     "context": 1000000,
     "inputPrice": 0.75,
     "inputPriceCacheHit": 0.075,
@@ -218,6 +222,7 @@
     "hasReasoning": true,
     "AAIndex": 62,
     "tokenUseAAIndex": 120,
+    "simpleBench": 81.8,
     "context": 1000000,
     "inputPrice": 0,
     "outputPrice": 0
@@ -354,6 +359,7 @@
     "costAAIndex": 693.67,
     "tokenUseAAIndex": 160,
     "outputSpeed": 37.5,
+    "simpleBench": 60.2,
     "context": 262144,
     "inputPrice": 0.5,
     "inputPriceCacheHit": 0.05,
@@ -390,6 +396,7 @@
     "VendingBench": 3284.52,
     "valsIndex": 52.37,
     "vibeCodeBench": 82.3,
+    "ARCAGI2": 61.3,
     "bullshitBench": 14
   },
   {
