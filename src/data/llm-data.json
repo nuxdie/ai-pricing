@@ -223,25 +223,13 @@
     "hasVision": true,
     "hasReasoning": true,
     "AAIndex": 53,
-    "tokenUseAAIndex": 120,
+    "outputSpeed": 190,
+    "costAAIndex": 1341,
+    "tokenUseAAIndex": 130,
     "simpleBench": 81.8,
     "context": 1000000,
     "inputPrice": 0,
     "outputPrice": 0
-  },
-  {
-    "model": "Muse Spark 1.1",
-    "developer": "Meta",
-    "releaseDate": "2026-07-09",
-    "modelUrl": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
-    "hasVision": true,
-    "AAIndex": 51,
-    "outputSpeed": 124.9,
-    "tokenUseAAIndex": 94,
-    "costAAIndex": 548,
-    "VendingBench": 6520.47,
-    "valsIndex": 54.75,
-    "vibeCodeBench": 72.16
   },
   {
     "model": "Muse Glimmer",
