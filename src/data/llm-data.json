@@ -85,6 +85,20 @@
     "simpleBench": 22.1
   },
   {
+    "model": "Claude Opus 5.5",
+    "developer": "Anthropic",
+    "provider": "Anthropic",
+    "releaseDate": "2026-09-24",
+    "hasVision": true,
+    "hasReasoning": true,
+    "AAIndex": 58,
+    "tokenUseAAIndex": 260,
+    "context": 1000000,
+    "inputPrice": 4,
+    "inputPriceCacheHit": 0.2,
+    "outputPrice": 20
+  },
+  {
     "model": "Claude Fable 5.1",
     "developer": "Anthropic",
     "provider": "Anthropic",
