@@ -19,7 +19,8 @@
     "inputPriceCacheHit": 1,
     "outputPrice": 50,
     "bullshitBench": 69,
-    "VendingBench": 15514.7
+    "VendingBench": 15514.7,
+    "simpleBench": 83.6
   },
   {
     "model": "GPT 6.1 Sol",
@@ -36,7 +37,8 @@
     "outputPrice": 10,
     "costAAIndex": 1048,
     "vibeCodeBench": 88.93,
-    "valsIndex": 63.94
+    "valsIndex": 63.94,
+    "simpleBench": 82.9
   },
   {
     "model": "GPT 6 Luna",
@@ -74,7 +76,8 @@
     "inputPriceCacheHit": 0.2,
     "outputPrice": 20,
     "bullshitBench": 62,
-    "VendingBench": 9235.25
+    "VendingBench": 9235.25,
+    "simpleBench": 88.4
   },
   {
     "model": "Claude Sonnet 5.5",
@@ -94,7 +97,8 @@
     "inputPriceCacheHit": 0.2,
     "outputPrice": 10,
     "costAAIndex": 11067,
-    "VendingBench": 11165.28
+    "VendingBench": 11165.28,
+    "simpleBench": 75.9
   },
   {
     "model": "Claude Haiku 5.5",
