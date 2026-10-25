@@ -11,7 +11,7 @@
     "costAAIndex": 4747,
     "tokenUseAAIndex": 49,
     "outputSpeed": 66,
-    "valsIndex": 66.61,
+    "valsIndex": 65.02,
     "vibeCodeBench": 89.59,
     "ARCAGI2": 95,
     "context": 1000000,
@@ -35,7 +35,8 @@
     "inputPrice": 2,
     "outputPrice": 10,
     "costAAIndex": 1048,
-    "vibeCodeBench": 88.93
+    "vibeCodeBench": 88.93,
+    "valsIndex": 63.94
   },
   {
     "model": "GPT 6 Luna",
@@ -51,7 +52,8 @@
     "inputPrice": 0.1,
     "outputPrice": 0.5,
     "costAAIndex": 102,
-    "vibeCodeBench": 81.65
+    "vibeCodeBench": 81.65,
+    "valsIndex": 52.32
   },
   {
     "model": "Claude Opus 5.5",
@@ -109,7 +111,8 @@
     "inputPrice": 0.1,
     "outputPrice": 0.5,
     "costAAIndex": 306,
-    "VendingBench": 3602.46
+    "VendingBench": 3602.46,
+    "valsIndex": 58.71
   },
   {
     "model": "Claude Fable 5.1",
@@ -166,7 +169,7 @@
     "costAAIndex": 825.83,
     "tokenUseAAIndex": 120,
     "outputSpeed": 348.3,
-    "valsIndex": 62.25,
+    "valsIndex": 55.95,
     "vibeCodeBench": 78.65,
     "simpleBench": 82.4,
     "context": 1000000,
@@ -227,7 +230,8 @@
     "bullshitBench": 52,
     "costAAIndex": 6611,
     "VendingBench": 9432.18,
-    "vibeCodeBench": 83.09
+    "vibeCodeBench": 83.09,
+    "valsIndex": 64.88
   },
   {
     "model": "Muse Spark 1.3",
@@ -305,7 +309,8 @@
     "inputPriceCacheHit": 0.2,
     "outputPrice": 10,
     "costAAIndex": 3073,
-    "vibeCodeBench": 84.89
+    "vibeCodeBench": 84.89,
+    "valsIndex": 62.52
   },
   {
     "model": "GLM 5.3",
@@ -321,7 +326,7 @@
     "tokenUseAAIndex": 210,
     "outputSpeed": 94.9,
     "VendingBench": 8163.61,
-    "valsIndex": 56.97,
+    "valsIndex": 59.73,
     "vibeCodeBench": 78.13,
     "simpleBench": 66.2,
     "bullshitBench": 66,
@@ -438,6 +443,7 @@
     "inputPrice": 0.43,
     "outputPrice": 0.87,
     "costAAIndex": 189,
-    "vibeCodeBench": 85.22
+    "vibeCodeBench": 85.22,
+    "valsIndex": 57.81
   }
 ]
