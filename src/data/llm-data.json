@@ -181,7 +181,7 @@
     "model": "Gemini 4 Argon",
     "developer": "Google AI",
     "provider": "Google AI",
-    "releaseDate": "2026-09-01",
+    "releaseDate": "2026-09-30",
     "hasVision": true,
     "hasReasoning": true,
     "AAIndex": 53,
@@ -190,7 +190,11 @@
     "context": 1000000,
     "inputPrice": 2,
     "inputPriceCacheHit": 0.1,
-    "outputPrice": 10
+    "outputPrice": 10,
+    "valsIndex": 69.24,
+    "vibeCodeBench": 91.91,
+    "VendingBench": 13718.16,
+    "bullshitBench": 65
   },
   {
     "model": "Gemini 3.8 Flash",
@@ -228,7 +232,7 @@
     "model": "Grok 4.7",
     "developer": "xAI",
     "provider": "xAI",
-    "releaseDate": "2026-09-01",
+    "releaseDate": "2026-09-21",
     "hasVision": true,
     "hasReasoning": true,
     "AAIndex": 46,
@@ -237,7 +241,8 @@
     "context": 500000,
     "inputPrice": 2,
     "inputPriceCacheHit": 0.5,
-    "outputPrice": 6
+    "outputPrice": 6,
+    "valsIndex": 58.56
   },
   {
     "model": "Grok 4.6",
@@ -267,7 +272,7 @@
     "model": "Muse Wonder",
     "developer": "Meta",
     "provider": "Meta",
-    "releaseDate": "2026-10-01",
+    "releaseDate": "2026-10-12",
     "hasVision": true,
     "hasReasoning": true,
     "AAIndex": 52,
@@ -276,7 +281,9 @@
     "context": 1000000,
     "inputPrice": 4,
     "inputPriceCacheHit": 0.2,
-    "outputPrice": 20
+    "outputPrice": 20,
+    "modelUrl": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/",
+    "bullshitBench": 52
   },
   {
     "model": "Muse Spark 1.3",
@@ -346,7 +353,7 @@
     "model": "Kimi K3.1 Pro",
     "developer": "Moonshot AI",
     "provider": "Moonshot AI",
-    "releaseDate": "2026-10-01",
+    "releaseDate": "2026-10-23",
     "hasVision": true,
     "hasReasoning": true,
     "AAIndex": 55,
@@ -411,7 +418,8 @@
     "context": 984000,
     "inputPrice": 2,
     "inputPriceCacheHit": 0.24,
-    "outputPrice": 6
+    "outputPrice": 6,
+    "valsIndex": 59.05
   },
   {
     "model": "Qwen 3.8 Max",
@@ -455,7 +463,7 @@
     "model": "MiniMax M3.1 Flash",
     "developer": "MiniMax",
     "provider": "MiniMax",
-    "releaseDate": "2026-10-01",
+    "releaseDate": "2026-10-19",
     "hasVision": true,
     "hasReasoning": true,
     "AAIndex": 43,
@@ -464,7 +472,8 @@
     "context": 1000000,
     "inputPrice": 0.15,
     "inputPriceCacheHit": 0.015,
-    "outputPrice": 0.6
+    "outputPrice": 0.6,
+    "valsIndex": 53.78
   },
   {
     "model": "MiniMax M3",
@@ -497,7 +506,8 @@
     "context": 1000000,
     "inputPrice": 0.3,
     "inputPriceCacheHit": 0.006,
-    "outputPrice": 1.2
+    "outputPrice": 1.2,
+    "valsIndex": 61.26
   },
   {
     "model": "DeepSeek V4 Pro",
@@ -552,7 +562,7 @@
     "developer": "StepFun",
     "provider": "StepFun",
     "parametersB": 600,
-    "releaseDate": "2026-09-01",
+    "releaseDate": "2026-09-20",
     "hasVision": true,
     "hasReasoning": true,
     "AAIndex": 44,
@@ -561,6 +571,7 @@
     "context": 1000000,
     "inputPrice": 1,
     "inputPriceCacheHit": 0.1,
-    "outputPrice": 2.7
+    "outputPrice": 2.7,
+    "vibeCodeBench": 70.4
   }
 ]
