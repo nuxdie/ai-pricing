@@ -36,6 +36,8 @@ export const providerLogos: Record<string, string> = {
     'Z AI': zaiLogo,
     'StepFun': stepFunLogo,
     'Xiaomi': xiaomiLogo,
+    'Moonshot AI': moonshotAIlogo,
+    'MiniMax': miniMaxLogo,
 };
 
 // Add developer logos mapping (using same logos as providers)
