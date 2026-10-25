@@ -18,7 +18,8 @@
     "inputPrice": 10,
     "inputPriceCacheHit": 1,
     "outputPrice": 50,
-    "bullshitBench": 69
+    "bullshitBench": 69,
+    "VendingBench": 15514.7
   },
   {
     "model": "GPT 6.1 Sol",
@@ -68,7 +69,8 @@
     "inputPrice": 4,
     "inputPriceCacheHit": 0.2,
     "outputPrice": 20,
-    "bullshitBench": 62
+    "bullshitBench": 62,
+    "VendingBench": 9235.25
   },
   {
     "model": "Claude Sonnet 5.5",
@@ -87,7 +89,8 @@
     "inputPrice": 2,
     "inputPriceCacheHit": 0.2,
     "outputPrice": 10,
-    "costAAIndex": 11067
+    "costAAIndex": 11067,
+    "VendingBench": 11165.28
   },
   {
     "model": "Claude Haiku 5.5",
@@ -103,7 +106,8 @@
     "bullshitBench": 57,
     "inputPrice": 0.1,
     "outputPrice": 0.5,
-    "costAAIndex": 306
+    "costAAIndex": 306,
+    "VendingBench": 3602.46
   },
   {
     "model": "Claude Fable 5.1",
@@ -166,7 +170,8 @@
     "context": 1000000,
     "inputPrice": 0.75,
     "inputPriceCacheHit": 0.075,
-    "outputPrice": 3.75
+    "outputPrice": 3.75,
+    "VendingBench": 5093.79
   },
   {
     "model": "Grok 4.7",
@@ -183,7 +188,8 @@
     "inputPriceCacheHit": 0.5,
     "outputPrice": 6,
     "valsIndex": 58.56,
-    "costAAIndex": 5446
+    "costAAIndex": 5446,
+    "VendingBench": 10536.83
   },
   {
     "model": "Muse Wonder Full",
@@ -215,7 +221,8 @@
     "outputPrice": 20,
     "modelUrl": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/",
     "bullshitBench": 52,
-    "costAAIndex": 6611
+    "costAAIndex": 6611,
+    "VendingBench": 9432.18
   },
   {
     "model": "Muse Spark 1.3",
