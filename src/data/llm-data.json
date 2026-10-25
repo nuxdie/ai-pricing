@@ -269,6 +269,20 @@
     "outputPrice": 6
   },
   {
+    "model": "Muse Wonder Full",
+    "developer": "Meta",
+    "releaseDate": "2026-10-12",
+    "modelUrl": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/",
+    "hasVision": true,
+    "hasReasoning": true,
+    "AAIndex": 56,
+    "tokenUseAAIndex": 140,
+    "valsIndex": 66.79,
+    "VendingBench": 12291.56,
+    "context": 1000000,
+    "notes": "No public API; available only via Muse Code Power/Maximum subscriptions"
+  },
+  {
     "model": "Muse Wonder",
     "developer": "Meta",
     "provider": "Meta",
