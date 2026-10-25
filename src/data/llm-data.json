@@ -13,7 +13,7 @@
     "outputSpeed": 66,
     "valsIndex": 65.02,
     "vibeCodeBench": 89.59,
-    "ARCAGI2": 95,
+    "ARCAGI2": 95.0,
     "context": 1000000,
     "inputPrice": 10,
     "inputPriceCacheHit": 1,
@@ -38,7 +38,8 @@
     "costAAIndex": 1048,
     "vibeCodeBench": 88.93,
     "valsIndex": 63.94,
-    "simpleBench": 82.9
+    "simpleBench": 82.9,
+    "ARCAGI2": 94.2
   },
   {
     "model": "GPT 6 Luna",
@@ -55,7 +56,8 @@
     "outputPrice": 0.5,
     "costAAIndex": 102,
     "vibeCodeBench": 81.65,
-    "valsIndex": 52.32
+    "valsIndex": 52.32,
+    "ARCAGI2": 59.3
   },
   {
     "model": "Claude Opus 5.5",
@@ -77,7 +79,8 @@
     "outputPrice": 20,
     "bullshitBench": 62,
     "VendingBench": 9235.25,
-    "simpleBench": 88.4
+    "simpleBench": 88.4,
+    "ARCAGI2": 91.7
   },
   {
     "model": "Claude Sonnet 5.5",
@@ -98,7 +101,8 @@
     "outputPrice": 10,
     "costAAIndex": 11067,
     "VendingBench": 11165.28,
-    "simpleBench": 75.9
+    "simpleBench": 75.9,
+    "ARCAGI2": 83.9
   },
   {
     "model": "Claude Haiku 5.5",
@@ -116,7 +120,8 @@
     "outputPrice": 0.5,
     "costAAIndex": 306,
     "VendingBench": 3602.46,
-    "valsIndex": 58.71
+    "valsIndex": 58.71,
+    "ARCAGI2": 61.3
   },
   {
     "model": "Claude Fable 5.1",
@@ -133,7 +138,7 @@
     "VendingBench": 5421.56,
     "vibeCodeBench": 90.26,
     "simpleBench": 86.6,
-    "ARCAGI2": 90,
+    "ARCAGI2": 90.0,
     "context": 1000000,
     "inputPrice": 10,
     "inputPriceCacheHit": 0.2,
@@ -158,7 +163,8 @@
     "vibeCodeBench": 91.91,
     "VendingBench": 13718.16,
     "bullshitBench": 65,
-    "costAAIndex": 2898
+    "costAAIndex": 2898,
+    "ARCAGI2": 91.3
   },
   {
     "model": "Gemini 3.8 Flash",
@@ -179,7 +185,8 @@
     "inputPrice": 0.75,
     "inputPriceCacheHit": 0.075,
     "outputPrice": 3.75,
-    "VendingBench": 5093.79
+    "VendingBench": 5093.79,
+    "ARCAGI2": 89.2
   },
   {
     "model": "Grok 4.7",
@@ -198,7 +205,8 @@
     "valsIndex": 58.56,
     "costAAIndex": 5446,
     "VendingBench": 10536.83,
-    "vibeCodeBench": 86.17
+    "vibeCodeBench": 86.17,
+    "ARCAGI2": 61.4
   },
   {
     "model": "Muse Wonder Full",
@@ -279,7 +287,8 @@
     "hasVision": true,
     "hasReasoning": true,
     "AAIndex": 26,
-    "context": 1000000
+    "context": 1000000,
+    "ARCAGI2": 1.5
   },
   {
     "model": "Mistral Large 4 Preview",
@@ -375,7 +384,8 @@
     "inputPrice": 0.5,
     "inputPriceCacheHit": 0.05,
     "outputPrice": 3,
-    "vibeCodeBench": 64.85
+    "vibeCodeBench": 64.85,
+    "ARCAGI2": 42.4
   },
   {
     "model": "MiniMax M3.1 Flash",
@@ -412,7 +422,8 @@
     "outputPrice": 1.2,
     "valsIndex": 61.26,
     "costAAIndex": 379,
-    "vibeCodeBench": 87.73
+    "vibeCodeBench": 87.73,
+    "ARCAGI2": 78.1
   },
   {
     "model": "Step 5 Preview",
