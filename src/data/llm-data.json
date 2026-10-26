@@ -27,7 +27,7 @@
     "developer": "OpenAI",
     "provider": "OpenAI",
     "releaseDate": "2026-09-29",
-    "modelUrl": "https://developers.openai.com/api/docs/changelog",
+    "modelUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
     "hasVision": true,
     "hasReasoning": true,
     "AAIndex": 52,
@@ -46,7 +46,7 @@
     "developer": "OpenAI",
     "provider": "OpenAI",
     "releaseDate": "2026-09-22",
-    "modelUrl": "https://developers.openai.com/api/docs/changelog",
+    "modelUrl": "https://developers.openai.com/api/docs/models/gpt-6-luna",
     "hasVision": true,
     "hasReasoning": true,
     "AAIndex": 38,
@@ -164,7 +164,8 @@
     "VendingBench": 13718.16,
     "bullshitBench": 65,
     "costAAIndex": 2898,
-    "ARCAGI2": 91.3
+    "ARCAGI2": 91.3,
+    "modelUrl": "https://deepmind.google/models/model-cards/gemini-4-argon/"
   },
   {
     "model": "Gemini 3.8 Flash",
@@ -206,7 +207,8 @@
     "costAAIndex": 5446,
     "VendingBench": 10536.83,
     "vibeCodeBench": 86.17,
-    "ARCAGI2": 61.4
+    "ARCAGI2": 61.4,
+    "modelUrl": "https://x.ai/news/grok-4-7"
   },
   {
     "model": "Muse Wonder Full",
@@ -288,7 +290,8 @@
     "hasReasoning": true,
     "AAIndex": 26,
     "context": 1000000,
-    "ARCAGI2": 1.5
+    "ARCAGI2": 1.5,
+    "modelUrl": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16"
   },
   {
     "model": "Mistral Large 4 Preview",
@@ -322,7 +325,9 @@
     "outputPrice": 10,
     "costAAIndex": 3073,
     "vibeCodeBench": 84.89,
-    "valsIndex": 62.52
+    "valsIndex": 62.52,
+    "modelUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+    "parametersB": 2800
   },
   {
     "model": "GLM 5.3",
@@ -363,7 +368,8 @@
     "outputPrice": 6,
     "valsIndex": 59.05,
     "costAAIndex": 7878,
-    "vibeCodeBench": 77.14
+    "vibeCodeBench": 77.14,
+    "modelUrl": "https://www.qwencloud.com/models/qwen3.8-max-0902"
   },
   {
     "model": "Qwen 3.8 27B",
@@ -403,7 +409,9 @@
     "outputPrice": 0.6,
     "valsIndex": 53.78,
     "costAAIndex": 320,
-    "vibeCodeBench": 73.94
+    "vibeCodeBench": 73.94,
+    "modelUrl": "https://www.minimax.io/blog/minimax-m31f",
+    "parametersB": 428
   },
   {
     "model": "DeepSeek V4.1 Flash 1017",
@@ -423,7 +431,8 @@
     "valsIndex": 61.26,
     "costAAIndex": 379,
     "vibeCodeBench": 87.73,
-    "ARCAGI2": 78.1
+    "ARCAGI2": 78.1,
+    "modelUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
   },
   {
     "model": "Step 5 Preview",
@@ -441,7 +450,8 @@
     "inputPriceCacheHit": 0.1,
     "outputPrice": 2.7,
     "vibeCodeBench": 70.4,
-    "costAAIndex": 1500
+    "costAAIndex": 1500,
+    "modelUrl": "https://stepfun.com/step-5-preview"
   },
   {
     "model": "MiMo V2.6 Pro",
@@ -458,6 +468,7 @@
     "outputPrice": 0.87,
     "costAAIndex": 189,
     "vibeCodeBench": 85.22,
-    "valsIndex": 57.81
+    "valsIndex": 57.81,
+    "modelUrl": "https://openrouter.ai/xiaomi/mimo-v2.6-pro"
   }
 ]
