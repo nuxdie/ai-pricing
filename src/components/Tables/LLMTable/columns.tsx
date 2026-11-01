@@ -301,6 +301,7 @@ export const columns = (
         return row.original.modelUrl ? (
           <a
             href={row.original.modelUrl}
+            title={row.original.notes}
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline inline-flex items-center gap-0.5"
