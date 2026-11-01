@@ -168,6 +168,24 @@
     "modelUrl": "https://deepmind.google/models/model-cards/gemini-4-argon/"
   },
   {
+    "model": "Gemini 4 Carbon (High)",
+    "developer": "Google AI",
+    "provider": "Google AI",
+    "modelUrl": "https://artificialanalysis.ai/models/gemini-4-carbon",
+    "pricingUrl": "https://artificialanalysis.ai/models/gemini-4-carbon",
+    "hasVision": true,
+    "hasReasoning": true,
+    "AAIndex": 59,
+    "tokenUseAAIndex": 200,
+    "outputSpeed": 84.6,
+    "outputSpeedSource": "https://artificialanalysis.ai/models/gemini-4-carbon",
+    "context": 1000000,
+    "inputPrice": 4,
+    "inputPriceCacheHit": 0.2,
+    "outputPrice": 20,
+    "notes": "Released October 2026. Artificial Analysis Intelligence Index v5.0; cost per task $7.76 (not total evaluation cost). Source checked 2026-11-01; no publicly available API listed."
+  },
+  {
     "model": "Gemini 3.8 Flash",
     "developer": "Google AI",
     "provider": "Google AI",
